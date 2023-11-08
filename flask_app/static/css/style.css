@@ -47,7 +47,7 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-html *{
+html * {
     box-sizing: border-box;
 }
 /*******************************************/
@@ -141,7 +141,7 @@ footer{
 }
 
 /*******************************************/
-/*! BLINKING CURSOR
+/*! BLINKING CURSOR SVG
 /*******************************************/
 @keyframes blink {
     100%,
