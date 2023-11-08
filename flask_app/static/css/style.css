@@ -1,0 +1,157 @@
+/*******************************************/
+/*! RESET
+/*******************************************/
+/* http://meyerweb.com/eric/tools/css/reset/
+  v2.0 | 20110126
+  License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+    border: none;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+html *{
+    box-sizing: border-box;
+}
+/*******************************************/
+/*! RESPONSIVE FONT SIZING
+/*******************************************/
+html {
+    font-size: 62.5%;
+}
+body {
+    font-size: 1.8rem;
+}
+h1 {
+    font-size: 2.8rem;
+}
+h2 {
+    font-size: 2rem;
+}
+h3 {
+    font-size: 2rem;
+}
+h4 {
+    font-size: 1.8rem;
+}
+/*******************************************/
+/*! BACKGROUND COLORS
+/*******************************************/
+html {
+    background-color: #000000;
+}
+/*******************************************/
+/*! COLOR
+/*******************************************/
+.neon-green{
+    color: #52FD61;
+}
+.neon-yellow{
+    color: #e9ff5c;
+}
+.neon-pink{
+    color: #ff00c8;
+}
+.very-light-grey{
+    color: #ffffff;
+}
+.red{
+    color: #ff0000;
+}
+.black{
+    color: #261b1b;
+}
+/*******************************************/
+/*! LAYOUT
+/*******************************************/
+.container {
+    margin: 0 auto;
+    /* width: 1200px; */
+    /* border: 1px dashed #52FD61; */
+}
+.logo-small {
+    width: 200px;
+}
+.flx{
+    display: flex;
+}
+.row{
+    flex-direction: row;
+}
+.col{
+    flex-direction: column;
+}
+.flx-start{
+    justify-content: flex-start;
+}
+/*******************************************/
+/*! BORDERS
+/*******************************************/
+.border-green-dash{
+    /* border: 1px dashed #52FD61; */
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%2352FD61FF' stroke-width='10' stroke-dasharray='21' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+}
+line {
+    stroke: #52FD61;
+  }
+/*******************************************/
+/*! PADDING & MARGIN
+/*******************************************/
+header,
+main,
+footer{
+    padding: 20px;
+}
+
+/*******************************************/
+/*! BLINKING CURSOR
+/*******************************************/
+@keyframes blink {
+    100%,
+    0% {
+      fill: black;
+    }
+    60% {
+      fill:#52FD61;
+    }
+}
+rect {
+    animation: blink 01.2s infinite;
+}

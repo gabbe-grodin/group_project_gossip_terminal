@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/flask_app/static/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- wrapper around everything is this div -->
+    <div class="flx col">
+
+        <!-- this header has the logo and may later contain a nav -->
+        <header class="flx row flx-start border-green-dash">
+            
+            <!-- logo -->
+            <svg 
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                width="1434px" height="152px">
+                    <text kerning="auto" font-family="Myriad Pro" fill="rgb(0, 0, 0)" font-size="150px" x="0px" y="111.942px">
+                        <tspan font-size="50px" font-family="Intel One Mono" font-weight="regular" fill="#53FF5F">&#47;&#47;&#32;Terminal
+                        </tspan>
+                    </text>
+                    <!-- blinking cursor: -->
+                    <svg width="100" height="120">
+                            <rect fill="#FFFFFF" 
+                            stroke="#000" 
+                            x="25" 
+                            y="50" 
+                            width="90%" 
+                            height="150%" />
+                    </svg>
+            </svg>
+
+            <svg viewBox="0 0 100 100">
+                <rect />
+                <circle />
+                <polygon />
+            </svg>
+
+        </header>
+
+
+        <main>
+            <svg viewBox="0 0 30 12" xmlns="http://www.w3.org/2000/svg">
+
+                <!-- No dashes nor gaps -->
+                <line x1="0" y1="1" x2="30" y2="1" />
+
+                <!-- Dashes and gaps of the same size -->
+                <line x1="0" y1="3" x2="30" y2="3" stroke-dasharray="4" />
+
+                <!-- Dashes and gaps of different sizes -->
+                <line x1="0" y1="5" x2="30" y2="5" stroke-dasharray="4 1" />
+
+                <!-- Dashes and gaps of various sizes with an odd number of values -->
+                <line x1="0" y1="7" x2="30" y2="7" stroke-dasharray="4 1 2" />
+
+                <!-- Dashes and gaps of various sizes with an even number of values -->
+                <line x1="0" y1="9" x2="30" y2="9" stroke-dasharray="4 1 2 3" />
+
+                <!-- Dashes starting with a gap -->
+                <line x1="0" y1="11" x2="30" y2="11" stroke-dasharray="0 4 0" />
+              </svg>
+
+
+              
+        </main>
+        <footer class="border-green-dash">
+            
+        </footer>
+
+    </div>
+</body>
+</html>
