@@ -60,7 +60,7 @@ body {
     font-size: 1.8rem;
 }
 h1 {
-    font-size: 2.8rem;
+    font-size: 3.8rem;
 }
 h2 {
     font-size: 2rem;
@@ -71,15 +71,51 @@ h3 {
 h4 {
     font-size: 1.8rem;
 }
+button{
+    font-size: 2rem;
+}
+/*******************************************/
+/*! FONT FAMILIES
+/*******************************************/
+body *{
+    font-family: monospace;
+}
+/*******************************************/
+/*! TEXT ALIGN
+/*******************************************/
+.text-center{
+    text-align: center;
+}
+.text-right{
+    text-align: right;
+}
+.text-left{
+    text-align: left;
+}
 /*******************************************/
 /*! BACKGROUND COLORS
 /*******************************************/
 html {
     background-color: #000000;
 }
+input{
+    background-color: #372f2f;
+}
+button{
+    background-color: #ff00c8;
+}
+button:hover{
+    background-color: #52FD61;
+}
+.alert{
+    background-color: #ff0000;
+}
 /*******************************************/
 /*! COLOR
 /*******************************************/
+body{
+    color: #52FD61;
+}
 .neon-green{
     color: #52FD61;
 }
@@ -98,17 +134,18 @@ html {
 .black{
     color: #261b1b;
 }
+.medium-grey{
+    color: #372f2f;
+}
+button{
+    color: #ffffff;
+}
+button:hover{
+    color: #261b1b;
+}
 /*******************************************/
 /*! LAYOUT
 /*******************************************/
-.container {
-    margin: 0 auto;
-    /* width: 1200px; */
-    /* border: 1px dashed #52FD61; */
-}
-.logo-small {
-    width: 200px;
-}
 .flx{
     display: flex;
 }
@@ -121,37 +158,61 @@ html {
 .flx-start{
     justify-content: flex-start;
 }
-/*******************************************/
-/*! BORDERS
-/*******************************************/
-.border-green-dash{
-    /* border: 1px dashed #52FD61; */
-    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%2352FD61FF' stroke-width='10' stroke-dasharray='21' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+.gap-1 {
+    gap: 1rem;
 }
-line {
-    stroke: #52FD61;
-  }
+.gap-2 {
+    gap: 2rem;
+}
+.gap-3 {
+    gap: 3rem;
+}
+.gap-4 {
+    gap: 4rem;
+}
+.gap-5 {
+    gap: 5rem;
+}
+/*******************************************/
+/*! WIDTHS & HEIGHTHS
+/*******************************************/
+input{
+    width: 100%;
+    height: 40px;
+}
+button{
+    width: 100%;
+}
+#login,
+#reg{
+    width: 1360px;
+}
 /*******************************************/
 /*! PADDING & MARGIN
 /*******************************************/
-header,
-main,
-footer{
+body *{
     padding: 20px;
 }
-
+.mt{
+    margin-top: 20px;
+}
+.mb{
+    margin-bottom: 20px;
+}
+/*******************************************/
+/*! BORDERS
+/*******************************************/
+body *{
+}
+form{
+    border: 4px dashed #52FD61;
+}
+input{
+    border: 1px solid #52FD61;
+}
+button{
+    border: 1px solid #e9ff5c;
+}
 /*******************************************/
 /*! BLINKING CURSOR SVG
 /*******************************************/
-@keyframes blink {
-    100%,
-    0% {
-      fill: black;
-    }
-    60% {
-      fill:#52FD61;
-    }
-}
-rect {
-    animation: blink 01.2s infinite;
-}
