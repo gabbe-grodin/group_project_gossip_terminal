@@ -1,0 +1,17 @@
+# ignore ALL .log files
+*.log
+
+# ignore ALL files in ANY directory named temp
+temp/
+
+# ignore dotenv
+.env
+
+# ignore whats inside of uploads but not the folder itself
+**/uploads/
+
+# ignore alternate schemas, leave active schema in root folder
+**/schemas
+
+# ignore dummy text
+dummy_text.txt
