@@ -27,7 +27,9 @@ def login():
         return redirect("/login")
 
     session["user_id"]=found_user_or_none.id
-    return redirect("/dashboard")
+    # return redirect("/dashboard")
+    return redirect('/user/'+str(id)+'dashboard')
+
 
 #invisible registration route, runs the constructor method
 @app.route("/register", methods=["POST"])
@@ -51,9 +53,9 @@ def register():
         }
     print("*"*60)
     session["user_id"] = User.create_user(data)
-    
-    
-    return redirect("/dashboard")
+
+    # return redirect("/dashboard")
+    return redirect('/user/'+str(id)+'dashboard')
 
 
 
@@ -73,12 +75,13 @@ def save_user_edit(user_id):
         "last_name": request.form["last_name"],
         "email": request.form["email"]
         }
-    
+
 
 
     User.update(user_data)
 
-    return redirect("/dashboard")
+    # return redirect("/dashboard")
+    return redirect('/user/'+str(id)+'dashboard')
 
 
 #route to logout
