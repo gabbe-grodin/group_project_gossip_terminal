@@ -3,75 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/flask_app/static/css/style.css">
-    <title>Document</title>
+    <title>Terminal of Goss</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
 
-    <!-- wrapper around everything is this div -->
-    <div class="flx col">
+    <!-- HEADER START -->
 
-        <!-- this header has the logo and may later contain a nav -->
-        <header class="flx row flx-start border-green-dash">
-            
-            <!-- logo -->
-            <svg 
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                width="1434px" height="152px">
-                    <text kerning="auto" font-family="Myriad Pro" fill="rgb(0, 0, 0)" font-size="150px" x="0px" y="111.942px">
-                        <tspan font-size="50px" font-family="Intel One Mono" font-weight="regular" fill="#53FF5F">&#47;&#47;&#32;Terminal
-                        </tspan>
-                    </text>
-                    <!-- blinking cursor: -->
-                    <svg width="100" height="120">
-                            <rect fill="#FFFFFF" 
-                            stroke="#000" 
-                            x="25" 
-                            y="50" 
-                            width="90%" 
-                            height="150%" />
-                    </svg>
-            </svg>
-
-            <svg viewBox="0 0 100 100">
-                <rect />
-                <circle />
-                <polygon />
-            </svg>
-
-        </header>
+    <header>
+        <!-- <object data="/flask_app/static/images/svg/logo.svg" type=""></object> -->
+        <h1>The Terminal</h1>
+        <h2>Welcome, { "session['first_name']..." }</h2>
+        <nav class="upper flx gap-2 mb italic">
+            <span>
+                <a href="#">account</a>
+            </span>
+            <span>
+                <a href="#">logout</a>
+            </span>
+        </nav>
+    </header>
+    <!-- HEADER END -->
 
 
-        <main>
-            <svg viewBox="0 0 30 12" xmlns="http://www.w3.org/2000/svg">
-
-                <!-- No dashes nor gaps -->
-                <line x1="0" y1="1" x2="30" y2="1" />
-
-                <!-- Dashes and gaps of the same size -->
-                <line x1="0" y1="3" x2="30" y2="3" stroke-dasharray="4" />
-
-                <!-- Dashes and gaps of different sizes -->
-                <line x1="0" y1="5" x2="30" y2="5" stroke-dasharray="4 1" />
-
-                <!-- Dashes and gaps of various sizes with an odd number of values -->
-                <line x1="0" y1="7" x2="30" y2="7" stroke-dasharray="4 1 2" />
-
-                <!-- Dashes and gaps of various sizes with an even number of values -->
-                <line x1="0" y1="9" x2="30" y2="9" stroke-dasharray="4 1 2 3" />
-
-                <!-- Dashes starting with a gap -->
-                <line x1="0" y1="11" x2="30" y2="11" stroke-dasharray="0 4 0" />
-              </svg>
 
 
-              
-        </main>
-        <footer class="border-green-dash">
-            
-        </footer>
+    <!-- FLASH VALIDATION MESSAGES-->
 
-    </div>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="flx alert col gap-1 mb">
+                {% for message in messages %}
+                        <p>{{ message }}</p>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+
+
+
+    <main>
+        <div class="flx row gap-4">
+
+
+
+            <!-- LATEST GOSS -->
+
+            <section class="flx col gap-1" id="big-section">
+                <h2 class="upper mb text-center italic">here's the latest hot goss:</h2>
+                <div>
+                    <h2>Lorem ipsum</h2>
+                    <p>Eveniet, hic tenetur? Voluptates ipsa sit quam exercitationem ipsum eligendi possimus in accusamus libero dolor, facere natus, quidem magni quasi, maxime porro!</p>
+                </div>
+
+                <div>
+                    <h2>Lorem ipsum</h2>
+                    <p>Eveniet, hic tenetur? Voluptates ipsa sit quam exercitationem ipsum eligendi possimus in accusamus libero dolor, facere natus, quidem magni quasi, maxime porro!</p>
+                </div>
+
+                <div>
+                    <h2>Lorem ipsum</h2>
+                    <p>Eveniet, hic tenetur? Voluptates ipsa sit quam exercitationem ipsum eligendi possimus in accusamus libero dolor, facere natus, quidem magni quasi, maxime porro!</p>
+                </div>
+
+
+                <div>
+                    <button type="submit">
+                        add your goss!
+                    </button>
+                </div>
+            </section>
+            <!-- SECTION END-->
+
+
+
+            <!-- MY GOSS -->
+
+            <section class="flx col gap-1" id="sml-section">
+                <h2 class="upper mb text-center italic">my goss:</h2>
+                <!-- or should we have this be a little form where you add goss right here and see it metriculate to the top of the list? -->
+                <div>
+                    <label for="goss">goss: </label>
+                    <input type="text" name="goss-title">
+                </div>
+
+                <div>
+                    <label for="goss-description">spill it...: </label>
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                </div>
+
+                <div>
+                    <button type="submit" >dish it</button>
+                </div>
+            </section>
+            <!-- SECTION END -->
+
+        </div>    
+    </main>
 </body>
 </html>
