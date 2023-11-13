@@ -81,6 +81,12 @@ body *{
     font-family: monospace;
 }
 /*******************************************/
+/*! LINE-HEIGHT
+/*******************************************/
+* {
+    line-height: 1.5rem;
+}
+/*******************************************/
 /*! TEXT ALIGN
 /*******************************************/
 .text-center{
@@ -96,7 +102,7 @@ body *{
 /*! BACKGROUND COLORS
 /*******************************************/
 html {
-    background-color: #000000;
+    background-color: #0f0f0f;
 }
 input{
     background-color: #372f2f;
@@ -114,7 +120,7 @@ button:hover{
 /*! COLOR
 /*******************************************/
 body{
-    color: #52FD61;
+    color: #fff;
 }
 .neon-green{
     color: #52FD61;
@@ -132,7 +138,7 @@ body{
     color: #ff0000;
 }
 .black{
-    color: #261b1b;
+    color: #0f0f0f;
 }
 .medium-grey{
     color: #372f2f;
@@ -212,6 +218,7 @@ body *{
 }
 form{
     border: 4px dashed #52FD61;
+    border-radius: 2rem;
 }
 input{
     border: 1px solid #52FD61;
@@ -220,5 +227,162 @@ button{
     border: 1px solid #e9ff5c;
 }
 /*******************************************/
-/*! BLINKING CURSOR SVG
+/*! BLINKING CURSOR JS
 /*******************************************/
+/* .typed::after{
+    content: "|";
+    font-size: 150%;
+    line-height: 30px;
+    animation: disappear-cursor .75s step-end infinite;
+}
+@keyframes disappear-cursor {
+    from, to { color: transparent }
+    100% { color: #f5f5f5 }
+}
+.typedAgain::after{
+    content: "|";
+    font-size: 150%;
+    line-height: 30px;
+    animation: blink .75s step-end infinite;
+}
+
+@keyframes blink {
+    from, to { color: transparent }
+    50% { color: #f5f5f5 }
+} */
+/*******************************************/
+/*! BLINKING CURSOR PURE CSS
+/*******************************************/
+.css-typing p {
+    border-right: 1em solid #fff;
+    font-size: 3.8rem;
+    line-height: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.css-typing p:nth-child(1) {
+    line-height: 1rem;
+    width: 7.3em;
+    -webkit-animation: type 2s steps(30, end);
+    animation: type 2s steps(30, end);
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+.css-typing p:nth-child(2) {
+    line-height: .1rem;
+    font-size: 2rem;
+    width: 20.5em;
+    opacity: 0;
+    -webkit-animation: type2 4s steps(60, end);
+    animation: type2 4s steps(60, end);
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+/* .css-typing p:nth-child(3) {
+    width: 7.3em;
+    opacity: 0;
+    -webkit-animation: type3 5s steps(20, end), blink .5s step-end infinite alternate;
+    animation: type3 5s steps(20, end), blink .5s step-end infinite alternate;
+    -webkit-animation-delay: 4s;
+    animation-delay: 4s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+} */
+
+@keyframes type {
+    0% {
+      width: 0;
+    }
+    99.9% {
+        border-right: 1em solid #fff;
+    }
+    100% {
+      border: none;
+    }
+}
+
+@-webkit-keyframes type {
+    0% {
+      width: 0;
+    
+    }
+    99.9% {
+        border-right: 1em solid #fff;
+    }
+    100% {
+      border: none;
+    }
+}
+
+@keyframes type2 {
+    0% {
+        width: 0;
+    }
+    1% {
+      opacity: 1;
+    }
+    99.9% {
+      border-right: 1em solid #fff;
+    }
+    100% {
+      opacity: 1;
+      border: none;
+    }
+}
+
+@-webkit-keyframes type2 {
+    0% {
+      width: 0;
+    }
+    1% {
+      opacity: 1;
+    }
+    99.9% {
+      border-right: 1em solid #fff;
+    }
+    100% {
+      opacity: 1;
+      border: none;
+    }
+}
+
+/* @keyframes type3 {
+    0% {
+      width: 0;
+    }
+    1% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+} */
+
+/* @-webkit-keyframes type3 {
+    0% {
+      width: 0;
+    }
+    1% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+} */
+
+@keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+}
+
+@-webkit-keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+}
+
