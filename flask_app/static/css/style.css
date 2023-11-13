@@ -218,6 +218,7 @@ body *{
 }
 form{
     border: 4px dashed #52FD61;
+    border-radius: 2rem;
 }
 input{
     border: 1px solid #52FD61;
