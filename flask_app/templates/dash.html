@@ -11,31 +11,15 @@
     <!-- HEADER START -->
 
     <header>
-
-        <!-- ! typing and blinking cursor w/css start -->
-
-        <div>
-            <h1>
-                Terminal
-            </h1>
-            <h2>
-                % Where devs come to gossip.
-            </h2>
-        </div>
-        <div class="css-typing">
-            <p>
-                Welcome, { session['first_name'] }.
-            </p>
-        </div>
-
-        <!-- ! typing and blinking cursor w/css end -->
-
-        <nav class="flx row">
+        <!-- <object data="/flask_app/static/images/svg/logo.svg" type=""></object> -->
+        <h1>The Terminal</h1>
+        <h2>Welcome, "{{ session['first_name'] }}..."</h2>
+        <nav class="upper flx gap-2 mb italic">
             <span>
                 <a href="#">create a new post</a>
             </span>
             <span>
-                <a href="/logout">logout</a>
+                <a href="/login">logout</a>
             </span>
         </nav>
 
