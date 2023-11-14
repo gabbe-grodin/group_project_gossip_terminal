@@ -27,8 +27,8 @@ def login():
         return redirect("/login")
 
     session["user_id"]=found_user_or_none.id
-    # return redirect("/dashboard")
-    return redirect('/user/'+str(id)+'dashboard')
+    session["first_name"] = found_user_or_none.first_name
+    return redirect('/user/'+str(session["user_id"])+'/dashboard')
 
 
 #invisible registration route, runs the constructor method
@@ -53,9 +53,10 @@ def register():
         }
     print("*"*60)
     session["user_id"] = User.create_user(data)
+    session["first_name"] = request.form["first_name"]
 
     # return redirect("/dashboard")
-    return redirect('/user/'+str(id)+'dashboard')
+    return redirect('/user/'+str(session["user_id"])+'/dashboard')
 
 
 
