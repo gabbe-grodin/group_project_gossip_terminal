@@ -56,23 +56,32 @@ html * {
 html {
     font-size: 62.5%;
 }
-body {
-    font-size: 1.8rem;
+body *{
+    font-size: 1.36rem;
 }
 h1 {
     font-size: 3.8rem;
 }
 h2 {
-    font-size: 2rem;
+    font-size: 1.36rem;
 }
 h3 {
-    font-size: 2rem;
+    font-size: 1.36rem;
 }
 h4 {
-    font-size: 1.8rem;
+    font-size: 1rem;
 }
 button{
-    font-size: 2rem;
+    font-size: 1.36rem;
+}
+/*******************************************/
+/*! FONT-WEIGHT
+/*******************************************/
+nav a{
+    font-weight: 500;
+}
+nav a:hover{
+    font-weight: 700;
 }
 /*******************************************/
 /*! FONT FAMILIES
@@ -83,8 +92,19 @@ body *{
 /*******************************************/
 /*! LINE-HEIGHT
 /*******************************************/
-* {
-    line-height: 1.5rem;
+body  {
+    /* line-height: 2rem; */
+}
+header{
+    /* line-height: 2.36rem; */
+}
+nav a{
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-thickness: 15%;
+}
+nav a:hover{
+    text-decoration-thickness: 25%;
 }
 /*******************************************/
 /*! TEXT ALIGN
@@ -122,6 +142,15 @@ button:hover{
 body{
     color: #fff;
 }
+input{
+    color: #fff;
+}
+button{
+    color: #ffffff;
+}
+button:hover{
+    color: #261b1b;
+}
 .neon-green{
     color: #52FD61;
 }
@@ -142,12 +171,6 @@ body{
 }
 .medium-grey{
     color: #372f2f;
-}
-button{
-    color: #ffffff;
-}
-button:hover{
-    color: #261b1b;
 }
 /*******************************************/
 /*! LAYOUT
@@ -182,16 +205,27 @@ button:hover{
 /*******************************************/
 /*! WIDTHS & HEIGHTHS
 /*******************************************/
+header,
+main,
+footer{
+    /* width: 1400px; */
+}
+header{
+    height: 190px;
+}
+footer{
+    height: 200px;
+}
 input{
     width: 100%;
-    height: 40px;
+    height: 36px;
 }
 button{
     width: 100%;
 }
 #login,
 #reg{
-    width: 1360px;
+    width: 50%;
 }
 #big-section{
     width: 70%;
@@ -202,8 +236,18 @@ button{
 /*******************************************/
 /*! PADDING & MARGIN
 /*******************************************/
-body *{
+*{
+    /* padding: 10px; */
+}
+body {
     padding: 20px;
+    margin: 0;
+}
+header{
+    padding-top: 20px;
+}
+.pd-10{
+    padding: 10px;
 }
 .mt{
     margin-top: 20px;
@@ -211,12 +255,16 @@ body *{
 .mb{
     margin-bottom: 20px;
 }
+button{
+    padding: 10px;
+}
 /*******************************************/
 /*! BORDERS
 /*******************************************/
-body *{
-}
-form{
+#login,
+#reg,
+#big-section,
+#sml-section{
     border: 4px dashed #52FD61;
     border-radius: 2rem;
 }
@@ -253,15 +301,12 @@ button{
 /*******************************************/
 /*! BLINKING CURSOR PURE CSS
 /*******************************************/
-.css-typing p {
+.css-typing * {
     border-right: 1em solid #fff;
-    font-size: 3.8rem;
-    line-height: 1rem;
     white-space: nowrap;
     overflow: hidden;
 }
-.css-typing p:nth-child(1) {
-    line-height: 1rem;
+.css-typing *:nth-child(1) {
     width: 7.3em;
     -webkit-animation: type 2s steps(30, end);
     animation: type 2s steps(30, end);
@@ -269,10 +314,8 @@ button{
     animation-fill-mode: forwards;
 }
 
-.css-typing p:nth-child(2) {
-    line-height: .1rem;
-    font-size: 2rem;
-    width: 20.5em;
+.css-typing *:nth-child(2) {
+    width: 100%;
     opacity: 0;
     -webkit-animation: type2 4s steps(60, end);
     animation: type2 4s steps(60, end);
@@ -282,16 +325,17 @@ button{
     animation-fill-mode: forwards;
 }
 
-/* .css-typing p:nth-child(3) {
-    width: 7.3em;
+/* .css-typing p:nth-child(3) { */
+.css-typing p:nth-child(1) {
+    width: 100%;
     opacity: 0;
-    -webkit-animation: type3 5s steps(20, end), blink .5s step-end infinite alternate;
-    animation: type3 5s steps(20, end), blink .5s step-end infinite alternate;
+    -webkit-animation: type3 5s steps(60, end), blink .5s step-end infinite alternate;
+    animation: type3 5s steps(60, end), blink .5s step-end infinite alternate;
     -webkit-animation-delay: 4s;
-    animation-delay: 4s;
+    animation-delay: 1s;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
-} */
+}
 
 @keyframes type {
     0% {
@@ -308,7 +352,7 @@ button{
 @-webkit-keyframes type {
     0% {
       width: 0;
-    
+
     }
     99.9% {
         border-right: 1em solid #fff;
@@ -350,7 +394,7 @@ button{
     }
 }
 
-/* @keyframes type3 {
+@keyframes type3 {
     0% {
       width: 0;
     }
@@ -359,10 +403,11 @@ button{
     }
     100% {
       opacity: 1;
+      border: none;
     }
-} */
+}
 
-/* @-webkit-keyframes type3 {
+@-webkit-keyframes type3 {
     0% {
       width: 0;
     }
@@ -371,8 +416,9 @@ button{
     }
     100% {
       opacity: 1;
+      border: none;
     }
-} */
+}
 
 @keyframes blink {
     50% {
