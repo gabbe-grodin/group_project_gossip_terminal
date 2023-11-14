@@ -68,7 +68,7 @@ def save_user_edit(user_id):
     if not User.validate_user(request.form):
         return redirect(f"/user/{user_id}/edit")
 
-    
+
 
     user_data ={
         "user_id":session["user_id"],

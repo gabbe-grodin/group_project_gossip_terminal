@@ -11,9 +11,23 @@
     <!-- HEADER START -->
 
     <header>
-        <!-- <object data="/flask_app/static/images/svg/logo.svg" type=""></object> -->
-        <h1 class="mb">The Terminal</h1>
-        <nav class="upper flx gap-2 mb italic">Where devs come to share the good kind of gossip.
+
+
+
+        <!-- ! typing and blinking cursor w/css start -->
+
+        <div class="css-typing">
+            <h1>
+                Terminal
+            </h1>
+            <h2>
+                % Where devs come to gossip.
+            </h2>
+        </div>
+
+        <!-- ! typing and blinking cursor w/css end -->
+
+        <nav>
         </nav>
     </header>
     <!-- HEADER END -->
@@ -42,7 +56,7 @@
 
             <!-- REGISTRATION FORM -->
 
-            <form action="/register" method="post" class="flx col gap-1" id="reg">
+            <form action="/register" method="post" class="flx col gap-1 pd-10" id="reg">
                 <h2 class="upper mb text-center italic">join the community!</h2>
                 <div>
                     <label for="first_name">First Name: </label>
@@ -81,9 +95,8 @@
 
             <!-- LOGIN FORM -->
 
-            <form action="/login" method="post" class="flx col gap-1" id="login">
-                <span class="text-center mb">or</span>
-                <h2 class="upper mb text-center italic">sign-in</h2>
+            <form action="/login" method="post" class="flx col gap-1 pd-10" id="login">
+                <h2 class="upper mb text-center italic">or sign-in</h2>
                 <div>
                     <label for="email">Email: </label>
                     <input type="text" name="email">
@@ -102,5 +115,6 @@
 
         </div>    
     </main>
+    <!-- <script src="{{url_for('static', filename='/js/typing_animation.js')}}"></script> -->
 </body>
 </html>
