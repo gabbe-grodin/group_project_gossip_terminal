@@ -12,10 +12,10 @@
 
     <header>
         <h1>Terminal</h1>
-        <h2>Welcome, "{{ session['first_name'] }}..."</h2>
+        <h2>Welcome, "{{ this_user.first_name }}..."</h2>
         <nav class="upper flx gap-2 mb italic">
             <span>
-                <a href="#">create a new post</a>
+                <a href="/user/{{ this_user.id }}/goss/add">create a new post</a>
             </span>
             <span>
                 <a href="/login">logout</a>

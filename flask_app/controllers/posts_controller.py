@@ -5,8 +5,11 @@ from flask_app.models.post_model import Post
 
 @app.route('/user/<int:id>/goss/add')
 def post_show_add(id):
-
-    return render_template('add_one.html')
+    data={
+        "id":session["user_id"]
+    }
+    this_user=User.get_user_by_id(data)
+    return render_template('add_one.html', this_user=this_user)
 
 @app.route('/user/<int:id>/add_goss')
 def add_post(id):
@@ -25,12 +28,18 @@ def user_dashboard(id):
     data = {
         "id":id
     }
+
+    data2={
+        "id":session["user_id"]
+    }
+    this_user=User.get_user_by_id(data2)
+    
     #get posts by user 
     user_posts = Post.get_all_posts_from_creator(data)
     #get posts by others
     others_posts = Post.get_posts_with_users()
 
-    return render_template('dash.html', userPosts=user_posts, othersPosts= others_posts)
+    return render_template('dash.html', userPosts=user_posts, othersPosts= others_posts, this_user=this_user)
 
 @app.route('/user/<int:id>/goss/<int:post_id>/view')
 def view_post(id, post_id):
