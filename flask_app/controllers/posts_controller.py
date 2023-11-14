@@ -11,17 +11,18 @@ def post_show_add(id):
     this_user=User.get_user_by_id(data)
     return render_template('add_one.html', this_user=this_user)
 
-@app.route('/user/<int:id>/add_goss')
+@app.route('/user/<int:id>/add_goss', methods=["POST"])
 def add_post(id):
 
     data = {
-        "user_id":id,
         "post_category":request.form["post_category"],
         "post_title":request.form["post_title"],
-        "post_text":request.form["post_text"]
+        "post_text":request.form["post_text"],
+        "user_id":session["user_id"]
     }
     Post.create_terminal_post(data)
-    return redirect('/user/'+str(id)+'dashboard')
+    return redirect(f"/user/{id}/dashboard")
+    # return redirect('/user/'+str(id)+'dashboard')
 
 @app.route('/user/<int:id>/dashboard')
 def user_dashboard(id):
@@ -33,7 +34,7 @@ def user_dashboard(id):
         "id":session["user_id"]
     }
     this_user=User.get_user_by_id(data2)
-    
+
     #get posts by user 
     user_posts = Post.get_all_posts_from_creator(data)
     #get posts by others

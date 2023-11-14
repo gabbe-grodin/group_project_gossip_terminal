@@ -71,16 +71,23 @@ h3 {
 h4 {
     font-size: 1rem;
 }
-button{
+button,
+.btn{
     font-size: 1.36rem;
 }
 /*******************************************/
 /*! FONT-WEIGHT
 /*******************************************/
-nav a{
+button,
+.btn,
+nav a,
+a{
     font-weight: 500;
 }
-nav a:hover{
+button,
+.btn,
+nav a:hover,
+a:hover{
     font-weight: 700;
 }
 /*******************************************/
@@ -98,12 +105,14 @@ body  {
 header{
     /* line-height: 2.36rem; */
 }
-nav a{
+nav a,
+a{
     color: inherit;
     text-decoration: underline;
     text-decoration-thickness: 15%;
 }
-nav a:hover{
+nav a:hover,
+a:hover{
     text-decoration-thickness: 25%;
 }
 /*******************************************/
@@ -127,14 +136,19 @@ html {
 input{
     background-color: #372f2f;
 }
-button{
+button,
+.btn{
     background-color: #ff00c8;
 }
-button:hover{
+button:hover,
+.btn:hover{
     background-color: #52FD61;
 }
 .alert{
     background-color: #ff0000;
+}
+.border-t-b:hover{
+    background-color: #4c4545;
 }
 /*******************************************/
 /*! COLOR
@@ -145,10 +159,12 @@ body{
 input{
     color: #fff;
 }
-button{
+button,
+.btn{
     color: #ffffff;
 }
-button:hover{
+button:hover,
+.btn:hover{
     color: #261b1b;
 }
 .neon-green{
@@ -164,7 +180,7 @@ button:hover{
     color: #ffffff;
 }
 .red{
-    color: #ff0000;
+    color: #ff5e5e;
 }
 .black{
     color: #0f0f0f;
@@ -213,6 +229,9 @@ footer{
 header{
     height: 190px;
 }
+main{
+    height: 1000px;
+}
 footer{
     height: 200px;
 }
@@ -220,17 +239,21 @@ input{
     width: 100%;
     height: 36px;
 }
-button{
+button,
+.btn{
     width: 100%;
 }
 #login,
 #reg{
     width: 50%;
 }
-#big-section{
-    width: 70%;
+.big-section{
+    width: 100%
 }
-#sml-section{
+.half-section{
+    width: 50%;
+}
+.sml-section{
     width: 30%;
 }
 /*******************************************/
@@ -243,7 +266,8 @@ body {
     padding: 20px;
     margin: 0;
 }
-header{
+header,
+footer{
     padding-top: 20px;
 }
 .pd-10{
@@ -255,24 +279,32 @@ header{
 .mb{
     margin-bottom: 20px;
 }
-button{
+button,
+.btn{
     padding: 10px;
+    margin-top: 10px;
 }
 /*******************************************/
 /*! BORDERS
 /*******************************************/
 #login,
 #reg,
-#big-section,
-#sml-section{
+.big-section,
+.half-section,
+.sml-section{
     border: 4px dashed #52FD61;
     border-radius: 2rem;
 }
 input{
     border: 1px solid #52FD61;
 }
-button{
+button,
+.btn{
     border: 1px solid #e9ff5c;
+}
+.border-t-b{
+    border-top: 1px solid #e9ff5c;
+    border-bottom: 1px solid #e9ff5c;
 }
 /*******************************************/
 /*! BLINKING CURSOR JS
