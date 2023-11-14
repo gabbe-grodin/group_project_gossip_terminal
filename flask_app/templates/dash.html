@@ -12,10 +12,10 @@
 
     <header>
         <h1>Terminal</h1>
-        <h2>Welcome, "{{ this_user.first_name }}..."</h2>
+        <h2>Welcome, {{ this_user.first_name }}.</h2>
         <nav class="upper flx gap-2 mb italic">
             <span>
-                <a href="/user/{{ this_user.id }}/goss/add">create a new post</a>
+                <a href="/user/{{ this_user.id }}/goss/add">add your hot goss</a>
             </span>
             <span>
                 <a href="/login">logout</a>
@@ -45,60 +45,45 @@
     <main>
         <div class="flx row gap-4">
 
-
-
             <!-- LATEST GOSS -->
 
-            <section class="flx col gap-1 pd-10" id="big-section">
-                <h2 class="upper mb text-center italic">here's the latest hot goss:</h2>
-                <div>
-                    <h2>Lorem ipsum</h2>
-                    <p>Eveniet, hic tenetur? Voluptates ipsa sit quam exercitationem ipsum eligendi possimus in accusamus libero dolor, facere natus, quidem magni quasi, maxime porro!</p>
-                </div>
+            <section class="half-section pd-10">
+                <h2 class="red">here's the latest hot goss:</h2>
 
-                <div>
-                    <h2>Lorem ipsum</h2>
-                    <p>Eveniet, hic tenetur? Voluptates ipsa sit quam exercitationem ipsum eligendi possimus in accusamus libero dolor, facere natus, quidem magni quasi, maxime porro!</p>
+                <div class="flx col gap-1">
+                    {% for post in othersPosts %}
+                    <div class="border-t-b">
+                        <h2>{{ post.post_title }}</h2>
+                        <p>{{ post.post_category }}</p>
+                        <p>{{ post.post_text }}</p>
+                    </div>
+                    {% endfor %}
                 </div>
-
-                <div>
-                    <h2>Lorem ipsum</h2>
-                    <p>Eveniet, hic tenetur? Voluptates ipsa sit quam exercitationem ipsum eligendi possimus in accusamus libero dolor, facere natus, quidem magni quasi, maxime porro!</p>
-                </div>
-
-
-                <div>
-                    <button type="submit">
-                        add your goss!
-                    </button>
-                </div>
-            </section>
+             </section>
             <!-- SECTION END-->
 
 
 
             <!-- MY GOSS -->
 
-            <section class="flx col gap-1 pd-10" id="sml-section">
-                <h2 class="upper mb text-center italic">my goss:</h2>
-                <!-- or should we have this be a little form where you add goss right here and see it metriculate to the top of the list? -->
-                <div>
-                    <label for="goss">goss: </label>
-                    <input type="text" name="goss-title">
-                </div>
-
-                <div>
-                    <label for="goss-description">spill it...: </label>
-                    <textarea name="" id="" cols="30" rows="10"></textarea>
-                </div>
-
-                <div>
-                    <button type="submit" >dish it</button>
+            <section class="half-section pd-10">
+                <h2 class="red">my goss:</h2>
+                <div class="flx col gap-1">
+                    {% for post in userPosts %}
+                    <div class="border-t-b">
+                        <h2>{{ post.post_title }}</h2>
+                        <p>{{ post.post_category }}</p>
+                        <p>{{ post.post_text }}</p>
+                    </div>
+                    {% endfor %}
                 </div>
             </section>
             <!-- SECTION END -->
 
         </div>    
+        <footer>
+            <a  href="/user/{{ this_user.id }}/goss/add">add your piece of hot goss</a>
+        </footer>
     </main>
 </body>
 </html>
