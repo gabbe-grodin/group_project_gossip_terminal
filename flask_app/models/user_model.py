@@ -153,7 +153,7 @@ class User:
         if len(data["password"]) < 8:
             flash("Password must be 8 characters")
             is_valid = False
-        if data["password"] != data["confirm_pw"]:
+        if data["password"] != data["confirm_password"]:
             flash("Passwords do not match")
             is_valid= False
         return is_valid
