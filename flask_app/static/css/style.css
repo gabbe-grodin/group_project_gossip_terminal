@@ -135,6 +135,9 @@ table{
 html {
     background-color: #0f0f0f;
 }
+main{
+    background-color: #9a007870;
+}
 input,
 textarea{
     background-color: #372f2f;
@@ -212,6 +215,19 @@ thead{
       text-shadow: 0 0 2px #fff, 0 0 3px #ff4da6, 0 0 4px #ff4da6, 0 0 5px #ff4da6, 0 0 60px #ff4da6, 0 0 7px #ff4da6, 0 0 8px #ff4da6;
     }
 }
+.box-glow {
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+@-webkit-keyframes glow {
+    /* from {
+        box-shadow: 0 0 20px #fff, 0 0 40px #fff, 0 0 20px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 35px #e60073, 0 0 50px #e60073;
+    } */
+    }
+    to {
+        box-shadow: 0 0 35px #fff, 0 0 50px #fff, 0 0 40px #ff4da6, 0 0 55px #ff4da6, 0 0 40px #ff4da6, 0 0 30px #ff4da6, 0 0 50px #ff4da6;
+      }
 .hidden{
     visibility: hidden;
 }
@@ -348,6 +364,9 @@ button,
     border: 3px dashed #52FD61;
     border-radius: 1rem;
 } */
+main{
+    border-radius: 20px;
+}
 input,
 textarea{
     border: 1px solid #52FD61;
