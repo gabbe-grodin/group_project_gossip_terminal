@@ -8,6 +8,13 @@
 </head>
 <body>
 
+
+    <!-- *** 
+DEBUGGING NEEDS (probably mostly in post model):
+--  when edit form submits, the update happens but also a whole new post is created.
+-- we need update validations so if the form is left empty, messages flash (i wouldn't worry about the drop-down needing any validation)
+-- this is more of a desire than a need, but i was thinking if we had another column in the posts table (another attribute in Post class) called 'tldr' (like the old internet saying: too long didn't read) which is shorter synopsis of the blog-post that will appear on the dashboard like a teaser. thoughts? -->
+
     <!-- HEADER START -->
 
     <header>
@@ -47,11 +54,11 @@
 
 
 
-            <!-- ADD GOSS FORM -->
+            <!-- EDIT GOSS FORM -->
 
             <form action="/user/{{ this_user.id }}/add_goss" method="POST" class="flx col gap-1 pd-10 big-section">
                 <label for="post_title">Name your piece of hot goss:
-                    <input type="text" name="post_title">
+                    <input type="text" name="post_title" value="{{ post.post_title }}">
                 </label>
 
                 <label for="post_category">Type of goss:
@@ -65,14 +72,14 @@
 
                 <label for="post_text">Spill it:
                 </label>
-                <textarea type="textarea" name="post_text" rows="20"></textarea>
+                <textarea type="textarea" name="post_text" rows="20">{{ post.post_text }}</textarea>
 
-                <label for="post_title">TLDR:
+                <label for="tldr">TLDR:
                     <input type="text" name="tldr">
                 </label>
 
                 <div>
-                    <button type="submit">dish it</button>
+                    <button type="submit">update your tea spill</button>
                 </div>
             </form>
 
