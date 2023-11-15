@@ -72,7 +72,7 @@ class Post:
         ;"""
 
         return connectToMySQL(DB).query_db(query,post_data) 
-    
+
 
 
     @classmethod
@@ -119,7 +119,7 @@ class Post:
         results = connectToMySQL(DB).query_db(query,{'id': id})
         print(results[0])
 
-        
+
         # Iterate over the db results and create instances of friends with cls.
         one_post_holder=cls(results[0])
         #hold all the recipe information and appends all the user information to the referenced object(where clause goes outside of the for loop)
@@ -133,23 +133,20 @@ class Post:
                 "password" : row_from_db["password"],
                 "created_at": row_from_db["users.created_at"],
                 "updated_at": row_from_db["users.updated_at"]
-            
+
                 }
             one_post_holder.creator=(user_model.User(user_data_results))#the right side replaces "None" in the constructor method, One_recipe_holder follows the same constructor method, but is named differently then the user data is replaced when we get the query results back with the user information
 
-        
+
 
             print("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",one_post_holder)#recipe holder
         return one_post_holder
-    
 
 
-        
 
-        
 
 
     @classmethod
-    def delete_plant(cls,id):
-        query="""Delete FROM plants WHERE id=%(id)s;"""
-        return connectToMySQL(DB).query_db(query,{"id":id})
+    def delete_post(cls,id):
+        query="""Delete FROM posts WHERE id=%(id)s;"""
+        return connectToMySQL(DB).query_db(query,id)
