@@ -5,6 +5,9 @@ from flask_app.models.post_model import Post
 
 @app.route('/user/<int:id>/goss/add')
 def post_show_add(id):
+
+    if "user_id" not in session:
+        return redirect('/login')
     data={
         "id":session["user_id"]
     }
@@ -13,7 +16,12 @@ def post_show_add(id):
 
 @app.route('/user/<int:id>/add_goss', methods=["POST"])
 def add_post(id):
-
+    if "user_id" not in session:
+        return redirect('/login')
+    
+    if not Post.validate_post(request.form):
+        return redirect('/user/'+str(id)+'/goss/add')
+    
     data = {
         "post_category":request.form["post_category"],
         "post_title":request.form["post_title"],
@@ -26,14 +34,14 @@ def add_post(id):
 
 @app.route('/user/<int:id>/dashboard')
 def user_dashboard(id):
+
+    if "user_id" not in session:
+        return redirect('/login')
     data = {
         "id":id
     }
 
-    data2={
-        "id":session["user_id"]
-    }
-    this_user=User.get_user_by_id(data2)
+    this_user=User.get_user_by_id(data)
 
     #get posts by user 
     user_posts = Post.get_all_posts_from_creator(data)
@@ -44,6 +52,8 @@ def user_dashboard(id):
 
 @app.route('/user/<int:id>/goss/<int:post_id>/view')
 def view_post(id, post_id):
+    if "user_id" not in session:
+        return redirect('/login')
     data={
         "id":session["user_id"]
     }
@@ -54,6 +64,8 @@ def view_post(id, post_id):
 
 @app.route('/user/<int:id>/goss/<int:post_id>/edit')
 def show_edit_post(id,post_id):
+    if "user_id" not in session:
+        return redirect('/login')
     data={
         "id":session["user_id"]
     }
@@ -63,6 +75,12 @@ def show_edit_post(id,post_id):
 
 @app.route('/user/<int:id>/goss/<int:post_id>/update', methods=['POST'])
 def update_post(id,post_id):
+    if "user_id" not in session:
+        return redirect('/login')
+    
+    if not Post.validate_post(request.form):
+        return redirect('/user/'+ str(id)+ '/goss/'+ str(post_id)+'/edit')
+    
     data = {
         "id":post_id,
         "post_category":request.form["post_category"],
@@ -75,6 +93,8 @@ def update_post(id,post_id):
 #! delete
 @app.route('/delete/<int:id>')
 def delete(id):
+    if "user_id" not in session:
+        return redirect('/login')
     data = {"id":id}
     data2 = session['user_id']
     Post.delete_post(data)
