@@ -54,9 +54,12 @@ def view_post(id, post_id):
 
 @app.route('/user/<int:id>/goss/<int:post_id>/edit')
 def show_edit_post(id,post_id):
-
+    data={
+        "id":session["user_id"]
+    }
+    this_user=User.get_user_by_id(data)
     user_post = Post.show_one_post_w_creator(post_id)
-    return render_template('edit_one.html' , post= user_post)
+    return render_template('edit_one.html', post=user_post, this_user=this_user)
 
 @app.route('/user/<int:id>/goss/<int:post_id>/update', methods=['POST'])
 def update_post(id,post_id):
