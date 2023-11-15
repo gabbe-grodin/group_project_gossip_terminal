@@ -31,33 +31,31 @@
 
 
     <main>
-        <div class="flx row gap-4">
 
 
 
             <!-- EDIT GOSS FORM -->
 
-            <form action="/user/{{ this_user.id }}/goss/{{ post.id }}/update" method="POST" class="flx col gap-1 pd-10 big-section">
-                <label for="post_title">Name your piece of hot goss:
+            <form action="/user/{{ this_user.id }}/goss/{{ post.id }}/update" method="POST" class="flx col gap-1">
+                <label for="post_title">TLDR:
                     <input type="text" name="post_title" value="{{ post.post_title }}">
                 </label>
 
-                <label for="post_category">Type of goss:
-                    <select name="post_category" id="post_category">
-                        <option value="job lead" {% if post.post_category == 'job lead' %} selected="selected" {% endif %}>job lead</option>
-                        <option value="boss goss" {% if post.post_category == 'boss goss' %} selected="selected" {% endif %}>boss goss</option>
-                        <option value="tech tools" {% if post.post_category == 'tech tools' %} selected="selected" {% endif %}>tech tools</option>
-                        <option value="mentor" {% if post.post_category == 'mentor' %} selected="selected" {% endif %}>mentor/mentee</option>
-                    </select>
+                <label for="post_category" class="flx row align-items-center">Type of goss:
+                    <div class="custom-select ml">
+                        <select name="post_category" id="post_category">
+                            <option value="job lead" {% if post.post_category == 'job lead' %} selected="selected" {% endif %}>job lead</option>
+                            <option value="boss goss" {% if post.post_category == 'boss goss' %} selected="selected" {% endif %}>boss goss</option>
+                            <option value="tech tools" {% if post.post_category == 'tech tools' %} selected="selected" {% endif %}>tech tools</option>
+                            <option value="mentor" {% if post.post_category == 'mentor' %} selected="selected" {% endif %}>mentor/mentee</option>
+                        </select>
+                    </div>
                 </label>
 
                 <label for="post_text">Spill it:
                 </label>
                 <textarea type="textarea" name="post_text" rows="20">{{ post.post_text }}</textarea>
 
-                <label for="tldr">TLDR:
-                    <input type="text" name="tldr">
-                </label>
 
                 <div>
                     <button type="submit">update your tea spill</button>
@@ -67,9 +65,6 @@
             <!-- FORM END-->
 
 
-
-
-        </div>    
     </main>
 
 

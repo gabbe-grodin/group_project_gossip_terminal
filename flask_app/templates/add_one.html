@@ -12,7 +12,6 @@
     <!-- HEADER END -->
 
 
-                <a href="/user/{{ this_user.id }}/dashboard">dash of goss</a>
 
     <!-- FLASH VALIDATION MESSAGES-->
 
@@ -29,33 +28,30 @@
 
 
     <main>
-        <div class="flx row gap-4">
 
 
 
             <!-- ADD GOSS FORM -->
 
-            <form action="/user/{{ this_user.id }}/add_goss" method="POST" class="flx col gap-1 pd-10 big-section">
-                <label for="post_title">Name your piece of hot goss:
+            <form action="/user/{{ this_user.id }}/add_goss" method="POST" class="flx col gap-1">
+                <label for="post_title">TLDR:
                     <input type="text" name="post_title">
                 </label>
 
-                <label for="post_category">Type of goss:
-                    <select name="post_category" id="post_category">
-                        <option value="job lead">job lead</option>
-                        <option value="boss goss">boss goss</option>
-                        <option value="tech tool goss">tech tool goss</option>
-                        <option value="mentor">mentor/mentee</option>
-                    </select>
+                <label for="post_category" class="flx row align-items-center">Type of goss:
+                    <div class="custom-select ml">
+                        <select name="post_category" id="post_category">
+                            <option value="job lead">job lead</option>
+                            <option value="boss goss">boss goss</option>
+                            <option value="tech tool goss">tech tool goss</option>
+                            <option value="mentor">mentor/mentee</option>
+                        </select>
+                    </div>
                 </label>
 
                 <label for="post_text">Spill it:
                 </label>
                 <textarea type="textarea" name="post_text" rows="20"></textarea>
-
-                <label for="post_title">TLDR:
-                    <input type="text" name="tldr">
-                </label>
 
                 <div>
                     <button type="submit">dish it</button>
@@ -67,7 +63,6 @@
 
 
 
-        </div>    
     </main>
 
     <!-- FOOTER START -->

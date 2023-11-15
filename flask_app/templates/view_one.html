@@ -17,24 +17,24 @@
 
 
     <main>
-        <div class="flx col gap-1 ">
+        <div class="flx col gap-3 ">
 
-            <div class="flx row vert-align">
+            <div class="flx row align-items-base">
 
-                <h2>{{ post.post_title }}</h2>
+                <h2 class="flx">{{ post.post_title }}</h2>
 
                 {% if post.user_id == session['user_id'] %}
-                    <section class="flx gap-2 mt">
-                        <a  href="/delete/{{ post.id }}">delete</a>
-                        <a  href="/user/{{ this_user.id }}/goss/{{ post.id }}/edit">edit</a>
+                    <section class="flx gap-2 ml">
+                        <a  href="/delete/{{ post.id }}">// delete</a>
+                        <a  href="/user/{{ this_user.id }}/goss/{{ post.id }}/edit">// edit</a>
                     </section>
                 {% endif %}
 
             </div>
 
-            <h4>Tea spilled by {{ post.creator.first_name }} {{ post.creator.last_name }} on {{ post.created_at }}</h4>
+            <h2>Tea spilled by {{ post.creator.first_name }} {{ post.creator.last_name }} on {{ post.created_at.strftime("%m-%d-%Y") }}</h2>
 
-            <h4>type of goss: {{ post.post_category }}</h4>
+            <h2>type of goss: {{ post.post_category }}</h2>
 
             <p>{{ post.post_text }}</p>
 
