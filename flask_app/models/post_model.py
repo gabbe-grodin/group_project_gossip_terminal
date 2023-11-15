@@ -142,11 +142,21 @@ class Post:
             print("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",one_post_holder)#recipe holder
         return one_post_holder
 
-
-
-
-
     @classmethod
     def delete_post(cls,id):
         query="""Delete FROM posts WHERE id=%(id)s;"""
         return connectToMySQL(DB).query_db(query,id)
+    
+    @staticmethod
+    def validate_post(data):
+        is_valid = True
+        
+        if len(data["post_title"]) < 3 or len(data["post_title"]) > 100:
+            flash("Goss name must be between 3 to 100 characters")
+            is_valid = False
+        
+        if len(data["post_text"]) < 3 :
+            flash("Goss description text must have more than 3 characters")
+            is_valid = False
+
+        return is_valid
