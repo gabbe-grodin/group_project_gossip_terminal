@@ -64,17 +64,18 @@ def show_edit_post(id,post_id):
 @app.route('/user/<int:id>/goss/<int:post_id>/update', methods=['POST'])
 def update_post(id,post_id):
     data = {
-        "id":id,
+        "id":post_id,
         "post_category":request.form["post_category"],
         "post_title":request.form["post_title"],
         "post_text":request.form["post_text"]
     }
     Post.update_post_info(data)
-    return redirect('/user/'+str(id)+'/goss/'+str(post_id)+'/view')
+    return redirect(f"/user/{id}/dashboard")
 
 #! delete
 @app.route('/delete/<int:id>')
 def delete(id):
     data = {"id":id}
+    data2 = session['user_id']
     Post.delete_post(data)
-    return redirect(f"/user/{id}/dashboard")
+    return redirect(f"/user/{data2}/dashboard")
