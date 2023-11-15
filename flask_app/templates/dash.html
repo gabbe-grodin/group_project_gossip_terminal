@@ -52,11 +52,13 @@
 
                 <div class="flx col gap-1">
                     {% for post in othersPosts %}
-                    <div class="border-t-b">
-                        <h2>{{ post.post_title }}</h2>
-                        <p>{{ post.post_category }}</p>
-                        <p>{{ post.post_text }}</p>
-                    </div>
+                    <a href="/user/{{ this_user.id }}/goss/{{ post.id }}/view">
+                        <div class="glow">
+                            <h2>{{ post.post_title }}</h2>
+                            <p>{{ post.post_category }}</p>
+                            <p>{{ post.tldr }}</p>
+                        </div>
+                    </a>
                     {% endfor %}
                 </div>
              </section>
@@ -70,20 +72,24 @@
                 <h2 class="red">my goss:</h2>
                 <div class="flx col gap-1">
                     {% for post in userPosts %}
-                    <div class="border-t-b">
-                        <h2>{{ post.post_title }}</h2>
-                        <p>{{ post.post_category }}</p>
-                        <p>{{ post.post_text }}</p>
-                    </div>
+                    <a href="/user/{{ this_user.id }}/goss/{{ post.id }}/view">
+                        <div class="glow">
+                            <h2>{{ post.post_title }}</h2>
+                            <p>{{ post.post_category }}</p>
+                            <p>{{ post.tldr }}</p>
+                        </div>
+                    </a>
                     {% endfor %}
                 </div>
             </section>
             <!-- SECTION END -->
 
-        </div>    
-        <footer>
-            <a  href="/user/{{ this_user.id }}/goss/add">add your piece of hot goss</a>
-        </footer>
+        </div>
     </main>
+
+    <footer>
+        <a  href="/user/{{ this_user.id }}/goss/add">add new piece of hot goss</a>
+    </footer>
+
 </body>
 </html>
