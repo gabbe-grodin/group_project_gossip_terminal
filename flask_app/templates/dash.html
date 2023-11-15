@@ -15,7 +15,6 @@
 
 
 
-
     <!-- FLASH VALIDATION MESSAGES-->
 
     {% with messages = get_flashed_messages() %}
@@ -38,7 +37,9 @@
                 <thead>
                     <tr>
                         <th>
-                            when
+                            <span class="hidden">
+                                when
+                            </span>
                         </th>
                         <th>
                             tldr
@@ -47,7 +48,7 @@
                             dishing dev
                         </th>
                         <th>
-                            if edited
+                            <span class="hidden">if edited</span>
                         </th>
                     </tr>
                 </thead>
@@ -55,7 +56,8 @@
                     {% for post in othersPosts %}
                         <tr class="glow">
                             <td>
-                                {{ post.created_at }}
+                                {{ post.created_at.strftime("%m-%d-%Y") }}
+
                             </td>
                             <td>
                                 <a href="/user/{{ this_user.id }}/goss/{{ post.id }}/view" class="rowlink">
@@ -66,7 +68,9 @@
                                     {{ post.creator.first_name }} {{ post.creator.last_name }}
                             </td>
                             <td>
-                                if edited
+                                {% if post.created_at != post.updated_at %}
+                                <span class="italic gray">edited</span>
+                                {% endif %}
                             </td>
                         </tr>
                     {% endfor %}
@@ -75,7 +79,7 @@
 
             <!-- MY GOSS -->
 
-            <section class="sml-section pd-10">
+            <section class="sml-section pd-10 border-l-dash">
                 <h2 class="red">my goss:</h2>
                 <div class="flx col gap-1">
                     {% for post in userPosts %}
