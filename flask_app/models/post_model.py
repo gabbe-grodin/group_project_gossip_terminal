@@ -30,7 +30,7 @@ class Post:
     
     @classmethod
     def get_all_posts_from_creator(cls,data):
-        print("im here in the plant model line 32.")
+        print("im here in the post model line 32.")
         query = "SELECT * FROM posts WHERE user_id=%(id)s;"
         # make sure to call the connectToMySQL function with the schema you are targeting.
         results = connectToMySQL(DB).query_db(query,data)
@@ -81,6 +81,7 @@ class Post:
                 FROM posts 
                 JOIN users
                 ON posts.user_id = users.id
+                ORDER BY posts.created_at DESC
         ;"""
         # make sure to call the connectToMySQL function with the schema you are targeting.
         results = connectToMySQL(DB).query_db(query)

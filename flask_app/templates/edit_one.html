@@ -9,27 +9,8 @@
 <body>
 
 
-    <!-- *** 
-DEBUGGING NEEDS (probably mostly in post model):
---  when edit form submits, the update happens but also a whole new post is created.
--- we need update validations so if the form is left empty, messages flash (i wouldn't worry about the drop-down needing any validation)
--- this is more of a desire than a need, but i was thinking if we had another column in the posts table (another attribute in Post class) called 'tldr' (like the old internet saying: too long didn't read) which is shorter synopsis of the blog-post that will appear on the dashboard like a teaser. thoughts? -->
-
     <!-- HEADER START -->
-
-    <header>
-        <h1>Terminal</h1>
-        <h2>Welcome, {{ this_user.first_name }}.</h2>
-        <nav class="upper flx gap-2 mb italic">
-            <span>
-                <a href="/user/{{ this_user.id }}/dashboard">dash of goss</a>
-            </span>
-            <span>
-                <a href="/logout">logout</a>
-            </span>
-        </nav>
-
-    </header>
+    {% block header %} {% include 'block_files/header.html' %} {% endblock header %}
     <!-- HEADER END -->
 
 
@@ -90,5 +71,14 @@ DEBUGGING NEEDS (probably mostly in post model):
 
         </div>    
     </main>
+
+
+
+    <!-- FOOTER START -->
+    {% block footer %} {% include 'block_Files/footer.html' %} {% endblock footer %}
+    <!-- FOOTER END -->
+    
+
+
 </body>
 </html>

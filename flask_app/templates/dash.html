@@ -1,28 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terminal of Goss</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
-</head>
+
+<!-- HEAD START -->
+{% block head %} {% include 'block_files/head.html' %} {% endblock head %}
+<!-- HEAD END -->
+
 <body>
 
+
+
     <!-- HEADER START -->
-
-    <header>
-        <h1>Terminal</h1>
-        <h2>Welcome, {{ this_user.first_name }}.</h2>
-        <nav class="upper flx gap-2 mb italic">
-            <span>
-                <a href="/user/{{ this_user.id }}/goss/add">add your hot goss</a>
-            </span>
-            <span>
-                <a href="/logout">logout</a>
-            </span>
-        </nav>
-
-    </header>
+    {% block header %} {% include 'block_files/header.html' %} {% endblock header %}
     <!-- HEADER END -->
 
 
@@ -45,30 +33,49 @@
     <main>
         <div class="flx row gap-4">
 
-            <!-- LATEST GOSS -->
 
-            <section class="half-section pd-10">
-                <h2 class="red">here's the latest hot goss:</h2>
-
-                <div class="flx col gap-1">
+            <table class="big-section pd-10">
+                <thead>
+                    <tr>
+                        <th>
+                            when
+                        </th>
+                        <th>
+                            tldr
+                        </th>
+                        <th>
+                            dishing dev
+                        </th>
+                        <th>
+                            if edited
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
                     {% for post in othersPosts %}
-                    <a href="/user/{{ this_user.id }}/goss/{{ post.id }}/view">
-                        <div class="glow">
-                            <h2>{{ post.post_title }}</h2>
-                            <p>{{ post.post_category }}</p>
-                            <p>{{ post.tldr }}</p>
-                        </div>
-                    </a>
+                        <tr class="glow">
+                            <td>
+                                {{ post.created_at }}
+                            </td>
+                            <td>
+                                <a href="/user/{{ this_user.id }}/goss/{{ post.id }}/view" class="rowlink">
+                                    {{ post.post_title }}
+                                </a>
+                            </td>
+                            <td>
+                                    {{ post.creator.first_name }} {{ post.creator.last_name }}
+                            </td>
+                            <td>
+                                if edited
+                            </td>
+                        </tr>
                     {% endfor %}
-                </div>
-             </section>
-            <!-- SECTION END-->
-
-
+                </tbody>
+             </table>
 
             <!-- MY GOSS -->
 
-            <section class="half-section pd-10">
+            <section class="sml-section pd-10">
                 <h2 class="red">my goss:</h2>
                 <div class="flx col gap-1">
                     {% for post in userPosts %}
@@ -87,9 +94,11 @@
         </div>
     </main>
 
-    <footer>
-        <a  href="/user/{{ this_user.id }}/goss/add">add new piece of hot goss</a>
-    </footer>
+
+    <!-- FOOTER START -->
+    {% block footer %} {% include 'block_Files/footer.html' %} {% endblock footer %}
+    <!-- FOOTER END -->
+
 
 </body>
 </html>

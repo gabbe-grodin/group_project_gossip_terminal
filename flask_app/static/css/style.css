@@ -90,6 +90,9 @@ nav a:hover,
 a:hover{
     font-weight: 700;
 }
+thead{
+    font-weight: 700;
+}
 /*******************************************/
 /*! FONT FAMILIES
 /*******************************************/
@@ -105,15 +108,8 @@ body  {
 header{
     /* line-height: 2.36rem; */
 }
-nav a,
-a{
-    color: inherit;
-    text-decoration: underline;
-    text-decoration-thickness: 15%;
-}
-nav a:hover,
-a:hover{
-    text-decoration-thickness: 25%;
+thead{
+    line-height: 2rem;
 }
 /*******************************************/
 /*! TEXT ALIGN
@@ -126,6 +122,12 @@ a:hover{
 }
 .text-left{
     text-align: left;
+}
+table{
+    text-align: left;
+}
+.vert-align{
+    vertical-align: baseline;
 }
 /*******************************************/
 /*! BACKGROUND COLORS
@@ -169,6 +171,13 @@ button:hover,
 .btn:hover{
     color: #261b1b;
 }
+nav a,
+a{
+    color: inherit;
+}
+thead{
+    color: #ff0000;
+}
 .neon-green{
     color: #52FD61;
 }
@@ -203,6 +212,32 @@ button:hover,
       text-shadow: 0 0 2px #fff, 0 0 3px #ff4da6, 0 0 4px #ff4da6, 0 0 5px #ff4da6, 0 0 60px #ff4da6, 0 0 7px #ff4da6, 0 0 8px #ff4da6;
     }
 }
+.hidden{
+    visibility: hidden;
+}
+/*******************************************/
+/*! TEXT DECORATION
+/*******************************************/
+nav a,
+footer a{
+    text-decoration: underline;
+    text-decoration-thickness: 15%;
+}
+nav a:hover,
+footer a:hover{
+    text-decoration: underline;
+    text-decoration-thickness: 25%;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+}
+.upper{
+    text-transform: uppercase;
+}
+
 /*******************************************/
 /*! LAYOUT
 /*******************************************/
@@ -245,7 +280,7 @@ footer{
     /* width: 1400px; */
 }
 header{
-    height: 190px;
+    height: 136px;
 }
 main{
     max-height: 1000px;
@@ -266,7 +301,7 @@ button,
     width: 50%;
 }
 .big-section{
-    width: 100%
+    min-width: 800px; 
 }
 .half-section{
     width: 50%;
@@ -305,14 +340,14 @@ button,
 /*******************************************/
 /*! BORDERS
 /*******************************************/
-#login,
+/* #login,
 #reg,
 .big-section,
 .half-section,
 .sml-section{
-    border: 4px dashed #52FD61;
-    border-radius: 2rem;
-}
+    border: 3px dashed #52FD61;
+    border-radius: 1rem;
+} */
 input,
 textarea{
     border: 1px solid #52FD61;
@@ -324,6 +359,18 @@ button,
 .border-t-b{
     border-top: 1px solid #e9ff5c;
     border-bottom: 1px solid #e9ff5c;
+}
+.border-b-dash{
+    border-bottom: 1px dashed yellow;
+}
+.border-t-dash{
+    border-top: 1px dashed yellow;
+}
+.border-r-dash{
+    border-right: 1px dashed yellow;
+}
+.border-l-dash{
+    border-left: 1px dashed yellow;
 }
 /*******************************************/
 /*! BLINKING CURSOR JS
@@ -358,18 +405,18 @@ button,
     overflow: hidden;
 }
 .css-typing *:nth-child(1) {
-    width: 7.3em;
-    -webkit-animation: type 2s steps(30, end);
-    animation: type 2s steps(30, end);
+    width: 6em;
+    -webkit-animation: type 1.8s steps(60, end), blink .5s step-end infinite ;
+    animation: type 1.8s steps(60, end), blink .5s step-end infinite ;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
 }
 
 .css-typing *:nth-child(2) {
-    width: 100%;
+    width: 18em;
     opacity: 0;
-    -webkit-animation: type2 4s steps(60, end);
-    animation: type2 4s steps(60, end);
+    -webkit-animation: type2 3s steps(60, end), blink .4s step-end infinite ;
+    animation: type2 3s steps(60, end), blink .5s step-end infinite ;
     -webkit-animation-delay: 2s;
     animation-delay: 2s;
     -webkit-animation-fill-mode: forwards;
@@ -377,13 +424,13 @@ button,
 }
 
 /* .css-typing p:nth-child(3) { */
-.css-typing p:nth-child(1) {
-    width: 100%;
+.css-typing h2:nth-child(1) {
+    width: 20em;
     opacity: 0;
-    -webkit-animation: type3 5s steps(60, end), blink .5s step-end infinite alternate;
-    animation: type3 5s steps(60, end), blink .5s step-end infinite alternate;
-    -webkit-animation-delay: 4s;
-    animation-delay: 1s;
+    -webkit-animation: type3 3s steps(60, end), blink .3s step-end infinite ;
+    animation: type3 5s steps(60, end), blink .5s step-end infinite;
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
 }
@@ -482,4 +529,18 @@ button,
       border-color: transparent;
     }
 }
+/*******************************************/
+/*! TABLE
+/*******************************************/
+table {
+  position: relative;
+}
 
+.rowlink::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 1.5em; /* don't forget to set the height! */
+}

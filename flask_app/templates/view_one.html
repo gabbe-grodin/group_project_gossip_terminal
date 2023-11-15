@@ -1,57 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terminal of Goss</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
-</head>
+
+<!-- HEAD START -->
+{% block head %} {% include 'block_files/head.html' %} {% endblock head %}
+<!-- HEAD END -->
+
 <body>
 
-    <!-- HEADER START -->
 
-    <header>
-        <h1>Terminal</h1>
 
-        <h2>Welcome, {{ this_user.first_name }}.</h2>
-
-        <nav class="upper flx gap-2 mb italic">
-
-            <span>
-                <a href="/user/{{ this_user.id }}/dashboard">dash of goss</a>
-            </span>
-
-            <span>
-                <a href="/logout">logout</a>
-            </span>
-        </nav>
-
-    </header>
-
-    <!-- HEADER END -->
+   <!-- HEADER START -->
+   {% block header %} {% include 'block_files/header.html' %} {% endblock header %}
+   <!-- HEADER END -->
 
 
 
 
     <main>
-        <div class="flx col gap-1 pd-10 big-section">
+        <div class="flx col gap-1 ">
 
-            <h2>{{ post.post_title }}</h2>
+            <div class="flx row vert-align">
+
+                <h2>{{ post.post_title }}</h2>
+
+                {% if post.user_id == session['user_id'] %}
+                    <section class="flx gap-2 mt">
+                        <a  href="/delete/{{ post.id }}">delete</a>
+                        <a  href="/user/{{ this_user.id }}/goss/{{ post.id }}/edit">edit</a>
+                    </section>
+                {% endif %}
+
+            </div>
+
+            <h4>Tea spilled by {{ post.creator.first_name }} {{ post.creator.last_name }} on {{ post.created_at }}</h4>
 
             <h4>type of goss: {{ post.post_category }}</h4>
 
             <p>{{ post.post_text }}</p>
 
-        </div>    
+
+        </div>
+        
     </main>
 
-    <footer class="flx gap-2">
-        <a  href="/user/{{ this_user.id }}/goss/add">add new piece of hot goss</a>
 
-        <a  href="/delete/{{ post.id }}">delete</a>
 
-        <a  href="/user/{{ this_user.id }}/goss/{{ post.id }}/edit">edit</a>
-    </footer>
 
+    <!-- FOOTER START -->
+    {% block footer %} {% include 'block_Files/footer.html' %} {% endblock footer %}
+    <!-- FOOTER END -->
+
+    
 </body>
 </html>
