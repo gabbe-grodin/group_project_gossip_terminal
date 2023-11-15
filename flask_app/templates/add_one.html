@@ -1,32 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terminal of Goss</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
-</head>
+
+<!-- HEAD START -->
+{% block head %} {% include 'block_files/head.html' %} {% endblock head %}
+<!-- HEAD END -->
+
 <body>
 
     <!-- HEADER START -->
-
-    <header>
-        <h1>Terminal</h1>
-        <h2>Welcome, {{ this_user.first_name }}.</h2>
-        <nav class="upper flx gap-2 mb italic">
-            <span>
-                <a href="/user/{{ this_user.id }}/dashboard">dash of goss</a>
-            </span>
-            <span>
-                <a href="/logout">logout</a>
-            </span>
-        </nav>
-
-    </header>
+    {% block header %} {% include 'block_files/header.html' %} {% endblock header %}
     <!-- HEADER END -->
 
 
-
+                <a href="/user/{{ this_user.id }}/dashboard">dash of goss</a>
 
     <!-- FLASH VALIDATION MESSAGES-->
 
@@ -83,5 +69,11 @@
 
         </div>    
     </main>
+
+    <!-- FOOTER START -->
+    {% block footer %} {% include 'block_Files/footer.html' %} {% endblock footer %}
+    <!-- FOOTER END -->
+
+
 </body>
 </html>

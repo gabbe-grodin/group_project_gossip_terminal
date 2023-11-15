@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    {% block nav %}
+        <nav class="flx gap-2 mt">
+
+            <!-- if view_one.html link to dashboard -->
+            {% if filename=='dash.html' %}
+                <span>
+                    <a href="/user/{{ this_user.id }}/goss/add">add new goss</a>
+                </span>
+                <span>
+                    <a href="/logout">exit</a>
+                </span>
+            {% else %}
+                <span>
+                    <a href="/user/{{ this_user.id }}/dashboard">all the goss</a>
+                </span>
+                __
+                <span>
+                    <a href="/user/{{ this_user.id }}/goss/add">add new goss</a>
+                </span>
+                __
+                <span>
+                    <a href="/logout">exit</a>
+                </span>
+            {% endif %}
+            <!-- if not add_one.html link to add_one.html -->
+        </nav>
+    {% endblock nav %}
+</body>
+</html>

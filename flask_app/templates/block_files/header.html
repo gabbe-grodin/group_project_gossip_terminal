@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    {% block header %}
+    <header class="border-b-dash mb">
+        <h1>the Trmnl</h1>
+
+        <!-- ! typing and blinking cursor w/css start -->
+
+        <div class="css-typing">
+            <h2>Welcome, {{ this_user.first_name }}.</h2>
+        </div>
+
+        <!-- ! typing and blinking cursor w/css end -->
+        {% block nav %} {% include 'block_files/nav.html' %} {% endblock nav %}
+    </header>
+    {% endblock header %}
+</body>
+</html>
