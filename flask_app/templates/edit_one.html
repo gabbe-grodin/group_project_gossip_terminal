@@ -36,10 +36,10 @@
 
             <!-- EDIT GOSS FORM -->
 
-            <form action="/user/{{ this_user.id }}/goss/{{ post.id }}/update" method="POST" class="flx col gap-1">
+            <form action="/user/{{ this_user.id }}/goss/{{ post.id }}/update" method="POST" class="flx col gap-2">
                 <label for="post_title">TLDR:
-                    <input type="text" name="post_title" value="{{ post.post_title }}">
                 </label>
+                <input type="text" name="post_title" value="{{ post.post_title }}" class="border-l-none border-r-none border-t-none">
 
                 <label for="post_category" class="flx row align-items-center">Type of goss:
                     <div class="custom-select ml">
@@ -52,13 +52,13 @@
                     </div>
                 </label>
 
-                <label for="post_text">Spill it:
+                <label for="post_text">Edit your truth:
                 </label>
-                <textarea type="textarea" name="post_text" rows="20">{{ post.post_text }}</textarea>
+                <textarea type="textarea" name="post_text" rows="10" class="border-l-none border-r-none border-t-none">{{ post.post_text }}</textarea>
 
 
                 <div>
-                    <button type="submit">update your tea spill</button>
+                    <button type="submit">update your truth</button>
                 </div>
             </form>
 
