@@ -33,22 +33,23 @@
         <div class="flx row gap-4">
 
 
+
+
+            <!-- EVERYONE'S GOSS -->
+
             <table class="big-section pd-10">
                 <thead>
                     <tr>
                         <th>
-                            <span class="hidden">
-                                when
+                            <span>
+                                dishing dev
                             </span>
                         </th>
                         <th>
-                            tldr
+                            spilled
                         </th>
                         <th>
-                            dishing dev
-                        </th>
-                        <th>
-                            <span class="hidden">if edited</span>
+                            their truth
                         </th>
                     </tr>
                 </thead>
@@ -56,44 +57,57 @@
                     {% for post in othersPosts %}
                         <tr class="glow">
                             <td>
-                                {{ post.created_at.strftime("%m-%d-%Y") }}
+                                {{ post.creator.first_name }} {{ post.creator.last_name }} spilled their T
+                            </td>
+                            <td>
+                                <a href="/user/{{ this_user.id }}/goss/{{ post.id }}/view" class="rowlink">
+                                    {{ post.created_at.strftime("%m-%d-%Y") }} at {{ post.created_at.strftime("") }} - -
+                                </a>
+                            </td>
+                            <td>
+                                {{ post.post_title }}
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+             </table>
+            <!-- EVERYONE'S GOSS -->
 
+
+
+
+
+            <!-- MY GOSS -->
+
+            <table class="sml-section pd-10 border-l-dash">
+                <thead>
+                    <tr>
+                        <th>
+                            <span>
+                                I posted
+                            </span>
+                        </th>
+                        <th>
+                            my goss
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for post in userPosts %}
+                        <tr class="glow">
+                            <td>
+                                {{ post.created_at.strftime("%m-%d-%Y") }} at {{ post.created_at.strftime("") }}
                             </td>
                             <td>
                                 <a href="/user/{{ this_user.id }}/goss/{{ post.id }}/view" class="rowlink">
                                     {{ post.post_title }}
                                 </a>
                             </td>
-                            <td>
-                                    {{ post.creator.first_name }} {{ post.creator.last_name }}
-                            </td>
-                            <td>
-                                {% if post.created_at != post.updated_at %}
-                                <span class="italic gray">edited</span>
-                                {% endif %}
-                            </td>
                         </tr>
                     {% endfor %}
                 </tbody>
              </table>
-
-            <!-- MY GOSS -->
-
-            <section class="sml-section pd-10 border-l-dash">
-                <h2 class="red">my goss:</h2>
-                <div class="flx col gap-1">
-                    {% for post in userPosts %}
-                    <a href="/user/{{ this_user.id }}/goss/{{ post.id }}/view">
-                        <div class="glow">
-                            <h2>{{ post.post_title }}</h2>
-                            <p>{{ post.post_category }}</p>
-                            <p>{{ post.tldr }}</p>
-                        </div>
-                    </a>
-                    {% endfor %}
-                </div>
-            </section>
-            <!-- SECTION END -->
+            <!-- MY GOSS END -->
 
         </div>
     </main>
@@ -102,6 +116,7 @@
     <!-- FOOTER START -->
     {% block footer %} {% include 'block_Files/footer.html' %} {% endblock footer %}
     <!-- FOOTER END -->
+
 
 
 </body>

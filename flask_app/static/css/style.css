@@ -57,16 +57,16 @@ html {
     font-size: 62.5%;
 }
 body *{
-    font-size: 1.36rem;
+    font-size: 1.18rem;
 }
 h1 {
-    font-size: 3.8rem;
+    font-size: 3.6rem;
 }
 h2 {
-    font-size: 1.36rem;
+    font-size: 1.18rem;
 }
 h3 {
-    font-size: 1.36rem;
+    font-size: 1.18rem;
 }
 h4 {
     font-size: 1rem;
@@ -136,6 +136,9 @@ table{
 .align-items-center{
     align-items: center;
 }
+td{
+    text-wrap: nowrap;
+}
 /*******************************************/
 /*! BACKGROUND COLORS
 /*******************************************/
@@ -167,7 +170,7 @@ button:hover,
     background-color: #0f0f0f;
 }
 /*******************************************/
-/*! TEXT COLOR
+/*! TEXT COLORS
 /*******************************************/
 body{
     color: #fff;
@@ -214,6 +217,9 @@ thead{
 }
 .gray{
     color: #c1c1c1;
+}
+.alert{
+    color: #fff;
 }
 .glow:hover {
     -webkit-animation: glow 1s ease-in-out infinite alternate;
@@ -271,7 +277,9 @@ a{
 a:hover{
     text-decoration: none;
 }
-.upper{
+.upper,
+button,
+.btn{
     text-transform: uppercase;
 }
 .italic{
@@ -310,13 +318,16 @@ a:hover{
 .space-evenly{
     justify-content: space-evenly;
 }
+.space-between{
+    justify-content: space-between;
+}
 /*******************************************/
 /*! WIDTHS & HEIGHTHS
 /*******************************************/
 header,
 main,
 footer{
-    width: 1200px;
+    width: 1000px;
     overflow: hidden;
 }
 header{
@@ -330,7 +341,7 @@ footer{
 }
 input{
     width: 100%;
-    height: 36px;
+    height: 30px;
 }
 button,
 .btn{
@@ -341,13 +352,16 @@ button,
     width: 50%;
 }
 .big-section{
-    width: 1800px; 
+    width: 1000px;
 }
 .half-section{
     width: 50%;
 }
 .sml-section{
-    width: 500px;
+    width: 400px;
+}
+.alert{
+    width: 1000px;
 }
 /*******************************************/
 /*! PADDING & MARGIN
@@ -383,6 +397,9 @@ button,
 .custom-select select{
     padding: 10px;
 }
+.alert{
+    padding: 10px;
+}
 /*******************************************/
 /*! BORDERS
 /*******************************************/
@@ -403,7 +420,19 @@ textarea{
 }
 button,
 .btn{
-    border: 1px solid #e9ff5c;
+    border: none;
+}
+.border-t-none,
+.border-t-none:active{
+    border-top: none;
+}
+.border-r-none,
+.border-r-none:active{
+    border-right: none;
+}
+.border-l-none,
+.border-l-none:active{
+    border-left: none;
 }
 .border-t-b{
     border-top: 1px solid #e9ff5c;
@@ -420,6 +449,9 @@ button,
 }
 .border-l-dash{
     border-left: 1px dashed yellow;
+}
+.border-pink{
+    /* border: 1px dashed #ff00c8; */
 }
 /*******************************************/
 /*! BLINKING CURSOR JS
@@ -455,29 +487,29 @@ button,
 }
 .css-typing *:nth-child(1) {
     width: 6em;
-    -webkit-animation: type 1.8s steps(60, end), blink .5s step-end infinite ;
-    animation: type 1.8s steps(60, end), blink .5s step-end infinite ;
+    -webkit-animation: type 1s steps(50, end), blink .5s step-end infinite ;
+    animation: type 1s steps(50, end), blink .5s step-end infinite ;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
 }
 
 .css-typing *:nth-child(2) {
-    width: 18em;
+    width: 22em;
     opacity: 0;
-    -webkit-animation: type2 3s steps(60, end), blink .4s step-end infinite ;
-    animation: type2 3s steps(60, end), blink .5s step-end infinite ;
-    -webkit-animation-delay: 2s;
-    animation-delay: 2s;
+    -webkit-animation: type2 2s steps(40, end), blink .5s step-end infinite ;
+    animation: type2 2s steps(40, end), blink .5s step-end infinite ;
+    -webkit-animation-delay: 1.5s;
+    animation-delay: 1.5s;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
 }
 
 /* .css-typing p:nth-child(3) { */
 .css-typing h2:nth-child(1) {
-    width: 20em;
+    width: 23em;
     opacity: 0;
-    -webkit-animation: type3 3s steps(60, end), blink .3s step-end infinite ;
-    animation: type3 5s steps(60, end), blink .5s step-end infinite;
+    -webkit-animation: type3 2s steps(60, end), blink .5s step-end infinite ;
+    animation: type3 2s steps(60, end), blink .5s step-end infinite;
     -webkit-animation-delay: 0s;
     animation-delay: 0s;
     -webkit-animation-fill-mode: forwards;
@@ -516,7 +548,7 @@ button,
     1% {
       opacity: 1;
     }
-    99.9% {
+    40.9% {
       border-right: 1em solid #fff;
     }
     100% {

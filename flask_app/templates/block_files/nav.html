@@ -7,22 +7,23 @@
             <!-- if view_one.html link to dashboard -->
             {% if filename=='dash.html' %}
                 <span>
-                    <a href="/user/{{ this_user.id }}/goss/add">add new goss</a>
+                    <a href="/user/{{ this_user.id }}/goss/add" class="glow">add new goss</a>
                 </span>
                 <span>
                     <a href="/logout">exit</a>
                 </span>
             {% else %}
+                //
                 <span>
-                    <a href="/user/{{ this_user.id }}/dashboard">all the goss</a>
+                    <a href="/user/{{ this_user.id }}/dashboard" class="glow">all the goss</a>
                 </span>
-                __
+                //
                 <span>
-                    <a href="/user/{{ this_user.id }}/goss/add">add new goss</a>
+                    <a href="/user/{{ this_user.id }}/goss/add" class="glow">add new goss</a>
                 </span>
-                __
+                //
                 <span>
-                    <a href="/logout">exit</a>
+                    <a href="/logout" class="glow">exit</a>
                 </span>
             {% endif %}
             <!-- if not add_one.html link to add_one.html -->
