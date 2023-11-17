@@ -34,9 +34,13 @@
             <!-- ADD GOSS FORM -->
 
             <form action="/user/{{ this_user.id }}/add_goss" method="POST" class="flx col gap-2">
-                <label for="post_title">TLDR:
-                </label>
-                <input type="text" name="post_title" class="border-l-none border-r-none border-t-none">
+                
+                <div class="flx row">
+                    <label for="post_title" class="flx-1">TLDR:
+                    </label>
+                    <input type="text" name="post_title" class="flx-7 border-l-none border-r-none border-t-none">
+                </div>
+
                 <!-- eventually would like these to be checkboxes for multiple selections per form -->
                 <label for="post_category" class="flx row align-items-center">Type of goss:
                     <div class="custom-select ml">
