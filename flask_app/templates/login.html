@@ -5,6 +5,11 @@
 {% block head %} {% include 'block_files/head.html' %} {% endblock head %}
 <!-- HEAD END -->
 
+
+
+
+<!-- todos:  make dash scroll   -->
+
 <body>
 
     <!-- HEADER START -->
@@ -20,7 +25,7 @@
                 the Trmnl
             </h1>
             <h2>
-                gossip by devs, for devs.
+                gossip for devs, by devs.
             </h2>
         </div>
 
@@ -48,15 +53,15 @@
 
 
 
-    <main class="box-glow">
-        <div class="flx row gap-2">
+    <main>
+        <div class="flx row gap-2 border-t-dash border-b-dash">
 
 
 
             <!-- REGISTRATION FORM -->
 
-            <form action="/register" method="post" class="flx col gap-1 pd-10" id="reg">
-                <h2 class="upper mb text-center italic">join the community!</h2>
+            <form action="/register" method="post" class="flx col gap-1" id="reg">
+                <h2 class="text-center">join the community!</h2>
                 <div>
                     <label for="first_name">First Name: </label>
                     <input type="text" name="first_name" class="border-l-none border-r-none border-t-none">
@@ -94,8 +99,8 @@
 
             <!-- LOGIN FORM -->
 
-            <form action="/login" method="post" class="flx col gap-1 pd-10" id="login">
-                <h2 class="upper mb text-center italic">or sign-in</h2>
+            <form action="/login" method="post" class="flx col gap-1" id="login">
+                <h2 class="text-center">or sign-in</h2>
                 <div>
                     <label for="email">Email: </label>
                     <input type="text" name="email" class="border-l-none border-r-none border-t-none">

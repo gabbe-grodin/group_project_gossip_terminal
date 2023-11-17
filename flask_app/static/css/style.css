@@ -93,9 +93,6 @@ a:hover{
 thead{
     font-weight: 700;
 }
-nav a{
-    /* line-height: 4rem; */
-}
 /*******************************************/
 /*! FONT FAMILIES
 /*******************************************/
@@ -114,6 +111,9 @@ header{
 }
 thead{
     line-height: 2rem;
+}
+nav a{
+    /* line-height: 4rem; */
 }
 /*******************************************/
 /*! TEXT ALIGN
@@ -148,12 +148,9 @@ td{
 html {
     background-color: #0f0f0f;
 }
-main{
-    /* background-color:  rgba(223, 45, 255, 0.524); */
-}
 input,
 textarea{
-    background-color: #372f2f;
+    background-color: #626262;
 }
 button,
 .btn{
@@ -167,7 +164,7 @@ button:hover,
     background-color: #ff0000;
 }
 .border-t-b:hover{
-    background-color: #4c4545;
+    /* background-color: #4c4545; */
 }
 .custom-select select{
     background-color: #0f0f0f;
@@ -327,20 +324,24 @@ button,
 /*******************************************/
 /*! WIDTHS & HEIGHTHS
 /*******************************************/
+body{
+    width: 1000px;
+}
 header,
 main,
 footer{
     width: 1000px;
-    overflow: hidden;
+    overflow:hidden;
 }
 header{
     height: 136px;
 }
-main{
-    max-height: 1000px;
+.main-height{
+    height: 200px;
+    overflow: hidden;
 }
 footer{
-    height: 200px;
+    height: 136px;
 }
 input{
     width: 100%;
@@ -355,13 +356,15 @@ button,
     width: 50%;
 }
 .big-section{
-    width: 1000px;
+    width: 800px;
 }
 .half-section{
     width: 50%;
+    height: inherit;
 }
 .sml-section{
-    width: 400px;
+    width: 300px;
+    height: inherit;
 }
 .alert{
     width: 1000px;
@@ -369,12 +372,9 @@ button,
 /*******************************************/
 /*! PADDING & MARGIN
 /*******************************************/
-*{
-    /* padding: 10px; */
-}
 body {
-    padding: 30px;
-    margin: 0;
+    /* padding: 30px; */
+    margin: 0 auto;
 }
 header,
 footer{
@@ -382,6 +382,9 @@ footer{
 }
 .pd-10{
     padding: 10px;
+}
+.pd-l-10{
+    padding-left: 15px;
 }
 .mt{
     margin-top: 20px;
@@ -454,7 +457,7 @@ button,
     border-left: 1px dashed yellow;
 }
 .border-pink{
-    /* border: 1px dashed #ff00c8; */
+    border: 1px dashed #ff00c8;
 }
 /*******************************************/
 /*! BLINKING CURSOR JS
@@ -489,7 +492,7 @@ button,
     overflow: hidden;
 }
 .css-typing *:nth-child(1) {
-    width: 6em;
+    width: 25em;
     -webkit-animation: type 1s steps(50, end), blink .5s step-end infinite ;
     animation: type 1s steps(50, end), blink .5s step-end infinite ;
     -webkit-animation-fill-mode: forwards;
@@ -627,6 +630,27 @@ table {
   left: 0;
   width: 100%;
   height: 1.5em; /* don't forget to set the height! */
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #ae00ff #000000;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 6px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #000000;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #ae00ff;
+    border-radius: 0px;
+    border: 0px none #000000;
 }
 /*******************************************/
 /*! CUSTOM SELECT MENU/ DROPDOWN

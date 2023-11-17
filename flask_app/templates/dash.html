@@ -30,14 +30,14 @@
 
 
     <main>
-        <div class="flx row gap-4">
+        <div class="flx row gap-4 main-height">
 
 
 
 
             <!-- EVERYONE'S GOSS -->
 
-            <table class="big-section pd-10">
+            <table class="big-section">
                 <thead>
                     <tr>
                         <th>
@@ -45,10 +45,10 @@
                                 dishing dev
                             </span>
                         </th>
-                        <th>
+                        <th class="pd-l-10">
                             spilled
                         </th>
-                        <th>
+                        <th class="pd-l-10">
                             their truth
                         </th>
                     </tr>
@@ -59,12 +59,12 @@
                             <td>
                                 {{ post.creator.first_name }} {{ post.creator.last_name }} spilled their T
                             </td>
-                            <td>
+                            <td class="pd-l-10">
                                 <a href="/user/{{ this_user.id }}/goss/{{ post.id }}/view" class="rowlink">
                                     {{ post.created_at.strftime("%m-%d-%Y") }} at {{ post.created_at.strftime("") }} - -
                                 </a>
                             </td>
-                            <td>
+                            <td class="pd-l-10">
                                 {{ post.post_title }}
                             </td>
                         </tr>
@@ -78,35 +78,37 @@
 
 
             <!-- MY GOSS -->
-
-            <table class="sml-section pd-10 border-l-dash">
-                <thead>
-                    <tr>
-                        <th>
-                            <span>
-                                I posted
-                            </span>
-                        </th>
-                        <th>
-                            my goss
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for post in userPosts %}
-                        <tr class="glow">
-                            <td>
-                                {{ post.created_at.strftime("%m-%d-%Y") }} at {{ post.created_at.strftime("") }}
-                            </td>
-                            <td>
-                                <a href="/user/{{ this_user.id }}/goss/{{ post.id }}/view" class="rowlink">
-                                    {{ post.post_title }}
-                                </a>
-                            </td>
+            <div class="sml-section border-l-dash">
+                <table class="ml">
+                    <thead>
+                        <tr>
+                            <th>
+                                <span>
+                                    I posted
+                                </span>
+                            </th>
+                            <th class="pd-l-10">
+                                my goss
+                            </th>
                         </tr>
-                    {% endfor %}
-                </tbody>
-             </table>
+                    </thead>
+                    <tbody>
+                        {% for post in userPosts %}
+                            <tr class="glow">
+                                <td>
+                                    {{ post.created_at.strftime("%m-%d-%Y") }} at {{ post.created_at.strftime("") }} - - 
+                                </td>
+                                <td class="pd-l-10">
+                                    <a href="/user/{{ this_user.id }}/goss/{{ post.id }}/view" class="rowlink">
+                                        {{ post.post_title }}
+                                    </a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                 </table>
+            
+            </div>
             <!-- MY GOSS END -->
 
         </div>

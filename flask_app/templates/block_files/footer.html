@@ -3,12 +3,9 @@
 <body>
     {% block footer %}
     <footer class="border-t-dash mt">
-        <div class="flx row">
-            
-            <h3 class="neon-yellow">current date and time - - </h3>
-            <span class="ml">{</span>
-            <span id="datetime"></span>
-            <span>}</span>
+        <div class="flx row css-typing">
+            <h3 class="neon-yellow">current date and time - -</h3>
+            <span id="datetime" class="neon-green"></span>
         </div>
         {% block nav %} {% include 'block_files/nav.html' %} {% endblock nav %}
     </footer>
