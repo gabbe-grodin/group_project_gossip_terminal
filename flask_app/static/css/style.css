@@ -156,11 +156,12 @@ html {
 input,
 textarea{
     /* background-color: #626262; */
-    background-color: #0f0f0f;
+    background-color: #535353;
+    
 }
 button,
 .btn{
-    background-color: #484848;
+    background-color: #e00000;
     /* background-color: #0f0f0f; */
     /* background-color: #ff00c843; */
 }
@@ -338,6 +339,18 @@ button,
 .flx-3{
     flex: 3;
 }
+.flx-4{
+    flex: 4;
+}
+.flx-5{
+    flex: 5;
+}
+.flx-6{
+    flex: 6;
+}
+.flx-7{
+    flex: 7;
+}
 .space-evenly{
     justify-content: space-evenly;
 }
@@ -455,7 +468,7 @@ main{
 }
 input,
 textarea{
-    border-bottom: 1px solid #c1c1c1;
+    /* border-bottom: 1px solid #c1c1c1; */
 }
 button,
 .btn{
