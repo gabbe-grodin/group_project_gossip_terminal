@@ -60,10 +60,10 @@ body *{
     font-size: 1.14rem;
 }
 h1 {
-    font-size: 3rem;
+    font-size: 2.36rem;
 }
 h2 {
-    font-size: 1.14rem;
+    font-size: 1.36rem;
 }
 h3 {
     font-size: 1.14rem;
@@ -73,7 +73,7 @@ h4 {
 }
 button,
 .btn{
-    font-size: 1.36rem;
+    font-size: 1.14rem;
 }
 /*******************************************/
 /*! FONT-WEIGHT
@@ -82,7 +82,7 @@ button,
 .btn,
 nav a,
 a{
-    font-weight: 500;
+    font-weight: 300;
 }
 button,
 .btn,
@@ -114,6 +114,10 @@ thead{
 }
 nav a{
     /* line-height: 4rem; */
+}
+button,
+.btn{
+    letter-spacing: .2rem;
 }
 /*******************************************/
 /*! TEXT ALIGN
@@ -150,11 +154,13 @@ html {
 }
 input,
 textarea{
-    background-color: #626262;
+    /* background-color: #626262; */
+    background-color: #0f0f0f;
 }
 button,
 .btn{
-    background-color: #ff00c8;
+    background-color: #0f0f0f;
+    /* background-color: #ff00c843; */
 }
 button:hover,
 .btn:hover{
@@ -208,6 +214,9 @@ thead{
 }
 .red{
     color: #ff5e5e;
+}
+.blue{
+    color: #91d1ff;
 }
 .black{
     color: #0f0f0f;
@@ -280,7 +289,7 @@ a:hover{
 .upper,
 button,
 .btn{
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
 }
 .italic{
     font-style: italic;
@@ -315,6 +324,15 @@ button,
 .gap-5 {
     gap: 5rem;
 }
+.flx-1{
+    flex: 1;
+}
+.flx-2{
+    flex: 2;
+}
+.flx-3{
+    flex: 3;
+}
 .space-evenly{
     justify-content: space-evenly;
 }
@@ -345,7 +363,7 @@ footer{
 }
 input{
     width: 100%;
-    height: 30px;
+    height: 28px;
 }
 button,
 .btn{
@@ -356,15 +374,16 @@ button,
     width: 50%;
 }
 .big-section{
-    width: 800px;
+    overflow: hidden;
+    width: 600px;
 }
-.half-section{
+/* .half-section{
     width: 50%;
     height: inherit;
-}
+} */
 .sml-section{
     width: 300px;
-    height: inherit;
+    /* height: inherit; */
 }
 .alert{
     width: 1000px;
@@ -380,11 +399,18 @@ header,
 footer{
     padding-top: 20px;
 }
+input,
+textarea{
+    padding-left: 18px;
+}
 .pd-10{
     padding: 10px;
 }
 .pd-l-10{
     padding-left: 15px;
+}
+.pd-l-20{
+    padding-left: 20px;
 }
 .mt{
     margin-top: 20px;
@@ -398,7 +424,7 @@ footer{
 button,
 .btn{
     padding: 10px;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 .custom-select select{
     padding: 10px;
@@ -426,7 +452,8 @@ textarea{
 }
 button,
 .btn{
-    border: none;
+    /* border: none; */
+    border: 1px dashed #ff00c8;
 }
 .border-t-none,
 .border-t-none:active{
