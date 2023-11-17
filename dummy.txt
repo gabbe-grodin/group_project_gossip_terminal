@@ -1,3 +1,53 @@
+TLDR: Maangs Top-Secret Project
+
+Whispers in the virtual corridors suggest that a major player in the tech industry is working on a top-secret project that could redefine how we interact with technology. With details scarce and employees sworn to secrecy, speculation is running wild. Could it be the next big breakthrough or a high-stakes gamble that might just change the game?
+
+-------------------------------
+TLDR: Byte-sized Drama: Sizzling Tech Gossip That's Breaking the Internet!
+
+In the fast-paced world of technology, where innovation and secrecy go hand in hand, gossip is the glue that keeps the industry buzzing. From groundbreaking developments to behind-the-scenes drama, the tech world is a hotbed of whispers and rumors. Let's dive into the juiciest tech gossip that's currently sending shockwaves through Silicon Valley and beyond.
+
+----------------------------
+TLDR: New Star Trek series (chatGPT generated this dish)
+
+Title: "Beam Me Up, Gossip: Unveiling the Stellar Cast of the Newest Star Trek Series!"
+
+Introduction:
+
+In the vast expanse of the final frontier, where no one has gone before, Star Trek continues to captivate audiences with its timeless exploration of the cosmos. However, the latest buzz in the galaxy isn't about a new alien species or uncharted star system; it's about the jaw-dropping cast of the upcoming Star Trek series that promises to boldly go where no other has gone before in the realm of Hollywood gossip.
+
+Chris Hemsworth as Captain James T. Kirk:
+Hold on to your communicators, Trekkies, because the iconic role of Captain James T. Kirk will be taken over by none other than the dashing Chris Hemsworth. Known for his thunderous performance as Thor in the Marvel Cinematic Universe, Hemsworth is set to bring a fresh charisma to the captain's chair of the USS Enterprise.
+
+Emma Watson as Vulcan Science Officer T'Pryah:
+The star-studded lineup doesn't stop there. Emma Watson, the brilliant Hermione Granger from the Harry Potter series, is joining the Star Trek universe as T'Pryah, the stoic and logical Vulcan science officer. Fans can't wait to see how Watson's intelligence and grace translate into the alien world of Vulcan philosophy.
+
+Dwayne "The Rock" Johnson as Klingon General Korg:
+Prepare for intergalactic intensity as Dwayne "The Rock" Johnson steps into the shoes (and forehead ridges) of Klingon General Korg. Known for his unparalleled charisma and action-packed performances, The Rock is sure to bring an electrifying presence to the Klingon warrior culture.
+
+Zendaya as Ensign Nyota Chekov:
+Zendaya, the multitalented actress and singer, is set to don the iconic red uniform as Ensign Nyota Chekov. Breaking barriers and redefining roles, Zendaya's casting is a nod to the series' commitment to diversity and inclusivity, showcasing the enduring appeal of Star Trek's progressive values.
+
+Jeff Goldblum as Admiral Jonathan Archer:
+In a surprising twist, the beloved Jeff Goldblum will take on the role of Admiral Jonathan Archer, a character from the early 22nd century. Known for his eccentric charm and unique delivery, Goldblum is sure to add a touch of quirkiness to the Starfleet command.
+
+Conclusion:
+
+As the gossip mill continues to churn, one thing is clear: the upcoming Star Trek series is poised to be an interstellar sensation with a cast that defies expectations. From the Marvel universe to Hogwarts and beyond, these A-list actors are set to take Star Trek to new heights, exploring uncharted territories in the galaxy and on the red carpet. Get ready for a warp-speed adventure as this stellar ensemble prepares to embark on a journey that will undoubtedly leave Trekkies clamoring for more. Live long and prosper, indeed!
+-----------------------------
+
+TLDR: Secret Romance in the C-Suite
+
+Rumors are swirling about a clandestine romance between two high-profile CEOs of rival tech giants. Insiders claim that these tech titans have been keeping their relationship under wraps to avoid potential conflicts of interest. Could this love story reshape the landscape of the tech industry, or will it fizzle out like a buggy line of code?
+
+--------------------------
+TLDR: I had an excessively challenging interview at Maang
+
+Because these companies receive a high volume of job applications, they believe that difficult interview questions is the key to identifying the most skilled candidate.
+
+The issue lies in the fact that they pose theoretical or puzzles those bear no relevance to the actual skillset required. These questions may involve tasks such as reversing a binary tree, performing linked list operations, or solving complex logic problems.
+
+-------------------------
 TLDR: Soft layoffs
 
 Stay away from #fidelityinvestments . Here’s my experience working here and hoping to save others from the same career detour. Reasons why it sucks:
@@ -26,3 +76,29 @@ In California a class action lawsuit brought to Apple lead them to pay customers
  There is currently not away in Texas for customers to receive this type of justice.
 
 The bottom line is, it is a misnomer to call this machine, a laptop, a portable computer. If you are looking for a portable computer, do not purchase one of these.
+
+-------------------------
+TLDR: Companies you don't want to work for.
+
+Slate sent ballots to a wide range of journalists, scholars, advocates, and others who have been thinking critically about technology for years. We asked them to tell us which tech companies they are most concerned about, and we let them decide for themselves what counts as “concerning.” We told them to define the category of technology companies as narrowly or broadly as they liked, which is how, say, Exxon Mobil made the list. Each respondent ranked as many as 10 companies—subsidiaries counted as part of parent corporations—with more points going to the choices they placed at the top. Then we added up their votes and got this.
+
+What did we find? While the major U.S. tech companies topped the vote—read on to find out which came in at No. 1—our respondents are deeply concerned about foreign companies dabbling in surveillance and A.I., as well as the domestic gunners that power the data-broker business. No one thinks Twitter is the worst thing that could happen to a planet, but a lot of people worry about it a little. Companies with the potential to do harm can be as distressing as those with long records of producing it. Privacy people care a lot about misinformation, but misinformation people might not be so worried about privacy. Almost everyone distrusts Peter Thiel. And some people don’t have a problem with Amazon or Apple or even Facebook at all—which is why we included dissents for many of the top companies on our list.
+
+We hope you’ll argue over this attempt at finding consensus, make your own mental list, and decide which concerns expressed here are too mild, totally overblown, or exactly right.
+
+------------------------------
+TLDR: Sam Altman's job is available at OpenAI!
+
+Sam Altman, one of the most influential leaders in the burgeoning AI industry, is leaving OpenAI, the company he helped start in 2015 and led as CEO.
+
+The surprise news, announced Friday afternoon, comes just a few weeks after Altman led OpenAI’s first developer day, sharing the stage with Satya Nadella, CEO of Microsoft, a key OpenAI partner that has poured billions into the company.
+
+In a statement, OpenAI said Altman “was not consistently candid in his communications with the board, hindering its ability to exercise its responsibilities.”
+
+“The board no longer has confidence in his ability to continue leading OpenAI,” the company said.
+
+OpenAI CTO Mira Murati will serve as interim CEO.
+
+Greg Brockman, who helped start the company with Altman, is stepping down as chairman of the board but will remain in his role at OpenAI reporting to the CEO.
+
+“We are grateful for Sam’s many contributions to the founding and growth of OpenAI,” the company said. “At the same time, we believe new leadership is necessary as we move forward.”
