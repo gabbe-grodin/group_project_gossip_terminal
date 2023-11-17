@@ -15,19 +15,6 @@
 
 
 
-    <!-- FLASH VALIDATION MESSAGES-->
-
-    {% with messages = get_flashed_messages() %}
-        {% if messages %}
-            <div class="flx alert col gap-1 mb">
-                {% for message in messages %}
-                        <p>{{ message }}</p>
-                {% endfor %}
-            </div>
-        {% endif %}
-    {% endwith %}
-
-
 
     <main>
         <div class="flx row gap-4 main-height">
